@@ -15,12 +15,13 @@ Noi dung cong viec:
 - [x] Duyet noi dung tonghopchucnang_LeVanToan.docx
 - [x] Duyet UI tho by LeVanToan
 - [x] Duyet noi dung NguyenPhongPhu_MoTa.txt
+- [x] Reviewed NhatTai_Database_Completed.txt
 
 /* Committed? */
 - [x] Yes/No
 
 /* Note */
-- Luong sua lai data tables
+- Luong sua lai data tables theo NhatTai_Database_Completed.txt
 
 /* Yeu cau de tai */
 - Ap dung cac kien thuc hoc tren lop

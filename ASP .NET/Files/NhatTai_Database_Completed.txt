@@ -1,4 +1,9 @@
-1. Tai Khoan
+Thiet ke DB cho ASP .NET
+Ngay: 26/09/2024
+Review By NhatTai
+
+===== Data Tables =====
+1. TaiKhoan
 id:int:pk,
 tenTaiKhoan:varchar(50):notNull,
 matKhau:varchar(30):notNull,
@@ -23,7 +28,7 @@ updated_at:datetime:notNull
 3. Khoa
 id:int:pk,
 maKhoa:varchar(30):notNull,
-tenKhoa:nvarchar(50):notNull,
+tenKhoa:nvarchar(100):notNull,
 soDienThoai:varchar(10):notNull,
 email:varchar(50):notNull,
 is_deleted:bit:notNull,
@@ -96,3 +101,5 @@ created_by:int:notNull,
 created_at:datetime:notNull,
 updated_by:int:notNull,
 updated_at:datetime:notNull
+
+====== The End ======
