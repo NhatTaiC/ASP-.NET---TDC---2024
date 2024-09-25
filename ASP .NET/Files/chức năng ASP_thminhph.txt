@@ -1,0 +1,10 @@
+chức năng: 
+	- đăng kí tham quan 1 doanh nghiệp (admin): khi đủ số lượng sinh viên đăng kí thì duyệt yêu cầu
+	- ngày đã có buổi tham quan được chấp thuận thì sẽ không thể đăng kí và hiện thông báo "....." (admin)
+	- danh sách doanh nghiệp (admin): các doanh nghiệp được đề xuất và thông tin chi tiết về doanh nghiệp đó 
+		CRUD doanh nghiệp đề xuất
+	- tìm kiếm doanh nghiệp (admin): tìm kiếm doanh nghiệp được đề xuất
+	- lọc các doanh nghiệp theo thành phố
+	- đăng kí của tôi (User): thông tin đăng kí của User đã đăng kí 
+					
+	

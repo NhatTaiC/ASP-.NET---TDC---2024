@@ -1,9 +1,0 @@
-Mô tả ASP Project 
-Dự án "Quản lý đăng ký tham quan doanh nghiệp" nhằm xây dựng một hệ thống trực tuyến giúp tự động hóa quy trình đăng ký, quản lý thông tin người tham quan và lịch trình tham quan, nhằm nâng cao hiệu quả và tạo trải nghiệm tốt hơn cho người tham quan.
-Mục Tiêu :
--Xây dựng cơ sở dữ liệu tập trung lưu trữ thông tin người tham quan và lịch trình.
--Cung cấp giao diện trực quan, dễ sử dụng cho cả người đăng ký và người quản lý.
--Tạo các báo cáo thống kê chi tiết về số lượng người tham quan
-Phạm Vi:
--Đối tượng: Sinh viên các trường đại học, học sinh cấp 3.
--Loại hình tham quan: Tham quan các doanh nghiệp hợp tác và những công ty lớn.
