@@ -9,13 +9,10 @@ Le Van Toan
 Nguyen Phong Phu
 
 Noi dung cong viec:
-- [x] Them NhatTai_Database_Completed.txt
-- [x] Doi ten NguyenPhongphu.txt -> NguyenPhongPhu_MoTa.txt
-- [x] Chinh sua noi dung NguyenPhongPhu_MoTa.txt
-- [x] Duyet noi dung tonghopchucnang_LeVanToan.docx
-- [x] Duyet UI tho by LeVanToan
-- [x] Duyet noi dung NguyenPhongPhu_MoTa.txt
-- [x] Reviewed NhatTai_Database_Completed.txt
+- [x] Removed folder Nguyen
+- [x] Removed nhattai_asp_w2_note.txt in commits
+- [x] Added DB_Diagram.jpg design by Luong
+- [x] Removed thminhph_test.txt
 
 /* Committed? */
 - [x] Yes/No
