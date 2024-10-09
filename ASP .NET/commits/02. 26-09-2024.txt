@@ -1,0 +1,27 @@
+Lap Trinh ASP .NET - TDC - 2024
+Tuan: 2
+Ngay: 26/09/2024
+De tai: Dang ky tham quan doanh nghiep cua sinh vien TDC
+Nhom: 7
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+Nguyen Phong Phu
+
+Noi dung cong viec:
+- [x] Removed folder Nguyen
+- [x] Removed nhattai_asp_w2_note.txt in commits
+- [x] Added DB_Diagram.jpg design by Luong
+- [x] Removed thminhph_test.txt
+
+/* Committed? */
+- [x] Yes/No
+
+/* Note */
+- Luong sua lai data tables theo NhatTai_Database_Completed.txt
+
+/* Yeu cau de tai */
+- Ap dung cac kien thuc hoc tren lop
+- Co the xem de tai nhu bai tap
+- De tai 2: Quan ly Dk Tham Quan DN cua sv TDC
+- Lap ke hoach cho ASP .NET

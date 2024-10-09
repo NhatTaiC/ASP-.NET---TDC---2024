@@ -1,0 +1,27 @@
+Lap Trinh ASP .NET - TDC - 2024
+Tuan: 3
+Ngay: 30/09/2024
+De tai: Dang ky tham quan doanh nghiep cua sinh vien TDC
+Nhom: 5
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+Nguyen Phong Phu
+Pham The Minh
+
+Noi dung cong viec:
+- [x] Deleted folder UI - Màn hình in files/UI - Màn hình
+- [x] Created Nhom5_ASP.rar put folder UI & DB_Diagram.jpg in there
+
+/* Committed? */
+- [x] Yes/No
+
+/* Note */
+- Da nop bai
+
+
+/* Yeu cau de tai */
+- Ap dung cac kien thuc hoc tren lop
+- Co the xem de tai nhu bai tap
+- De tai 2: Quan ly Dk Tham Quan DN cua sv TDC
+- Lap ke hoach cho ASP .NET
