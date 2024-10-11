@@ -1,0 +1,25 @@
+Lap Trinh ASP .NET - TDC - 2024
+Tuan: 4
+Ngay: 11/10/2024
+De tai: Dang ky tham quan doanh nghiep cua sinh vien TDC
+Nhom: 5
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+Nguyen Phong Phu
+Pham The Minh
+
+Noi dung cong viec:
+- [x] Changed Files -> files
+- [x] Added folder Report
+- [x] Removed KhoaNgoaiASP.sql in Folder Database
+- [x] Added DKTQDN_script.sql in Folder Database
+- [x] Added Nhom 5 - DKTQDN.docx
+- [x] Nhom 5 - DKTQDN.pdf
+
+/* Committed? */
+- [x] Yes/No
+
+/* Note */
+- [x] Changed DB name DangKyThamQuanDoanhNghiep -> DKTQDN
+- [x] Uploaded file again
