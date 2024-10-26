@@ -1,0 +1,19 @@
+Lap Trinh ASP .NET - TDC - 2024
+Tuan: 4
+Ngay: 10/10/2024
+De tai: Dang ky tham quan doanh nghiep cua sinh vien TDC
+Nhom: 5
+Chau Nhat Tai
+Nguyen Quoc Luong
+Le Van Toan
+Nguyen Phong Phu
+Pham The Minh
+
+Noi dung cong viec:
+- [x] Updated file mdf
+
+
+/* Committed? */
+- [x] Yes/No
+
+/* Note */
