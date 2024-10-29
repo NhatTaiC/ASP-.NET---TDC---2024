@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Nhom5_ASP_DKTQDN</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Nhom5_ASP_DKTQDN.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="/css/logofooter_fit_tdc.png" alt="Logo">
+            </div>
+            <div class="header-text">
+                <h1>TRƯỜNG CAO ĐẲNG CÔNG NGHỆ THỦ ĐỨC</h1>
+                <p>Địa chỉ : 53 Võ Văn Ngân - Phường Linh Chiểu - Quận Thủ Đức - TP.HCM</p>
+                <p>Điện thoại : 08.38970023 - 08.38972339 - 08.38966825, Fax : 08.38962474</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="footer-container">
+            &copy; 2024 - Nhom5_ASP_DKTQDN
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,105 @@
+Thiet ke DB cho ASP .NET
+Ngay: 26/09/2024
+Review By NhatTai
+
+===== Data Tables =====
+1. TaiKhoan
+id:int:pk,
+tenTaiKhoan:varchar(100):null,
+matKhau:varchar(30):notNull,
+quyen:int:notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+2. KhoaHoc
+id:int:pk,
+maKhoaHoc:varchar(30):null,
+namBatDau:int:notNull,
+namKetThuc:int:notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+3. Khoa
+id:int:pk,
+maKhoa:varchar(30):null,
+tenKhoa:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull,
+email:varchar(100):notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+4. DoanhNghiep
+id:int:pk,
+maDoanhNghiep:varchar(30):null,
+tenDoanhNghiep:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull,
+diaChi:nvarchar(100):notNull,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+5. GiangVien
+id:int:pk,
+maGiangVien:varchar(30):null,
+tenGiangVien:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull,
+idKhoa:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+6. SinhVien
+id:int:pk,
+maSinhVien:varchar(30):null,
+tenSinhVien:nvarchar(100):notNull,
+soDienThoai:varchar(10):notNull,
+email:varchar(100):notNull,
+idKhoa:int:fk,
+idTaiKhoan:int:fk,
+idKhoaHoc:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+7. ChuyenDi
+id:int:pk,
+maDangKy:varchar(30):null,
+slot:int:notNull,
+ngayThamQuan:date:notNull,
+trangThai:int:notNull,
+idKhoa:int:fk,
+idGiangVien:int:fk,
+idDoanhNghiep:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+8. ChiTietDangKy
+id:int:pk,
+ngayDangKy:date:notNull,
+idSinhVien:int:fk,
+idDangKy:int:fk,
+is_deleted:int:notNull,
+created_by:int:notNull,
+created_at:datetime:notNull,
+updated_by:int:notNull,
+updated_at:datetime:notNull
+
+====== The End ======

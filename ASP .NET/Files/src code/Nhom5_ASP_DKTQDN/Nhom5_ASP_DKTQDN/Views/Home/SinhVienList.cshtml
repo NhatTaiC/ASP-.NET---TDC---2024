@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.SinhVien>
+
+@{
+    ViewData["Title"] = "SinhVienList";
+}
+
+<h1>SinhVienList</h1>
+
+<p>
+    <a asp-action="CreateSinhVien">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaSinhVien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenSinhVien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoDienThoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdKhoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTaiKhoan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdKhoaHoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSinhVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSinhVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoai)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.IdKhoa)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.IdTaiKhoan)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.IdKhoaHoc)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDeleted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </td>
+                <td>
+                    <a asp-action="EditSinhVien" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="DeleteSinhVien" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
