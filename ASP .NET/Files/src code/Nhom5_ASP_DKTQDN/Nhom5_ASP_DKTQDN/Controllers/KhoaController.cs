@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Nhom5_ASP_DKTQDN;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
 

@@ -80,7 +80,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             _DKTQDNContext.DoanhNghieps.Update(doanhNghiep);
             _DKTQDNContext.SaveChanges();
             return RedirectToAction("DoanhNghiepList");
-        }
+        }                                                                           
     }
      
 }

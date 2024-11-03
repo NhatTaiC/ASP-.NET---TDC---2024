@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.Khoa>
-
+@using X.PagedList.Mvc.Core
+@using X.PagedList
 @{
     ViewData["Title"] = "KhoaList";
 }
@@ -80,3 +81,13 @@
         }
     </tbody>
 </table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("KhoaList",
+    new { page = page }),
+    new X.PagedList.Mvc.Core.PagedListRenderOptions
+{
+    ContainerDivClasses = new[] { "navigation" },
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" }
+}
+
+    )
