@@ -46,58 +46,14 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             //var tklist = _dKTQDNContext.TaiKhoans.ToList();
             return View();
         }
-        public IActionResult KhoaList(int? page)
-        {
-            var khoaList = _dKTQDNContext.Khoas.ToPagedList(page ?? 1, 10);
-            return View(khoaList);
-        }
+      
         public IActionResult DoanhNghiepList(int? page)
         {
             var doanhNghiepList = _dKTQDNContext.DoanhNghieps.ToPagedList(page ?? 1, 10);
             return View(doanhNghiepList);
         }
-        public IActionResult CreateKhoa(Khoa obj)
-        {   
-            _dKTQDNContext.Add(obj);
-            _dKTQDNContext.SaveChanges();
-            return RedirectToAction("KhoaList");
-        }
-        public IActionResult CreateDoanhNghiep(DoanhNghiep obj)
-        {
-            _dKTQDNContext.Add(obj);
-            _dKTQDNContext.SaveChanges();
-            return RedirectToAction("DoanhNghiepList");
-        }
-        public IActionResult DeleteKhoa(int id)
-        {
-            Khoa obj = _dKTQDNContext.Khoas.SingleOrDefault(d => d.Id == id);
-            if (obj != null)
-            {
-                _dKTQDNContext.Khoas.Remove(obj);
-                _dKTQDNContext.SaveChanges();
-            }
-            return RedirectToAction("DoanhNghiepList");
-        }
-        public IActionResult DeleteDoanhNghiep(int id)
-        {
-            DoanhNghiep obj = _dKTQDNContext.DoanhNghieps.SingleOrDefault(d => d.Id == id);
-            if (obj != null)
-            {
-                _dKTQDNContext.DoanhNghieps.Remove(obj);
-                _dKTQDNContext.SaveChanges();
-            }
-            return RedirectToAction("KhoaList");
-        }
-        public IActionResult KhoaUpdate(int? id)
-        {
-            Khoa objKhoa = _dKTQDNContext.Khoas.FirstOrDefault(d => d.Id == id);
-            return View(objKhoa);
-        }
-        public IActionResult DoanhNghiepUpdate(int? id)
-        {
-            DoanhNghiep objDoanhNghiep = _dKTQDNContext.DoanhNghieps.FirstOrDefault(d => d.Id == id);
-            return View(objDoanhNghiep);
-        }
+    
+      
 
         public IActionResult EditTaiKhoan(int id)
         {
