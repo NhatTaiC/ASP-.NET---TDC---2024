@@ -3,36 +3,64 @@
   "WorkspaceRootPath": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\home\\giangvienlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\home\\giangvienlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\sinhvien\\editsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\sinhvien\\editsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\home\\editsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\home\\editsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\sinhvien\\createsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\sinhvien\\createsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\controllers\\sinhviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\controllers\\sinhviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\sinhvien\\sinhvienlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\sinhvien\\sinhvienlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\giangvien\\giangvienlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\giangvien\\giangvienlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\giangvien\\creategiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\giangvien\\creategiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\models\\khoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\models\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\models\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\controllers\\giangviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\controllers\\giangviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\home\\createsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\home\\createsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\giangvien\\editgiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\giangvien\\editgiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\home\\sinhvienlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\home\\sinhvienlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\home\\editgiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\home\\editgiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\home\\creategiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\home\\creategiangvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\models\\khoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\models\\khoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\models\\giangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\models\\giangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\asp\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -62,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 272,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,129 +114,226 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditSinhVien.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\EditSinhVien.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Home\\EditSinhVien.cshtml",
-              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\EditSinhVien.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Home\\EditSinhVien.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "DocumentIndex": 6,
+              "Title": "KhoaHoc.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\KhoaHoc.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Models\\KhoaHoc.cs",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\KhoaHoc.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Models\\KhoaHoc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:54:59.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SinhVienController.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\SinhVienController.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Controllers\\SinhVienController.cs",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\SinhVienController.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Controllers\\SinhVienController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAqwEAAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:50:32.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateGiangVien.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\GiangVien\\CreateGiangVien.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\GiangVien\\CreateGiangVien.cshtml",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\GiangVien\\CreateGiangVien.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\GiangVien\\CreateGiangVien.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-27T13:21:59.9Z",
+              "WhenOpened": "2024-10-27T12:35:30.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateSinhVien.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\SinhVien\\CreateSinhVien.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\SinhVien\\CreateSinhVien.cshtml",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\SinhVien\\CreateSinhVien.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\SinhVien\\CreateSinhVien.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T13:19:15.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateSinhVien.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\CreateSinhVien.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Home\\CreateSinhVien.cshtml",
-              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\CreateSinhVien.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Home\\CreateSinhVien.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
+              "Title": "SinhVienList.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\SinhVien\\SinhVienList.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\SinhVien\\SinhVienList.cshtml",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\SinhVien\\SinhVienList.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\SinhVien\\SinhVienList.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-27T13:19:15.103Z"
+              "WhenOpened": "2024-10-27T13:08:40.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SinhVienList.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\SinhVienList.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Home\\SinhVienList.cshtml",
-              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\SinhVienList.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Home\\SinhVienList.cshtml",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAmwGAAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-27T13:08:40.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditGiangVien.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\EditGiangVien.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Home\\EditGiangVien.cshtml",
-              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\EditGiangVien.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Home\\EditGiangVien.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-27T12:53:25.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateGiangVien.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\CreateGiangVien.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Home\\CreateGiangVien.cshtml",
-              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\CreateGiangVien.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Home\\CreateGiangVien.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-27T12:35:30.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "GiangVienList.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\GiangVienList.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Home\\GiangVienList.cshtml",
-              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\GiangVienList.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Home\\GiangVienList.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFMAAAAAAAAA",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\GiangVien\\GiangVienList.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\GiangVien\\GiangVienList.cshtml",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\GiangVien\\GiangVienList.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\GiangVien\\GiangVienList.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAE0AAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-27T12:28:44.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAQwHIAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T12:25:26.112Z"
+              "DocumentIndex": 0,
+              "Title": "EditSinhVien.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\SinhVien\\EditSinhVien.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\SinhVien\\EditSinhVien.cshtml",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\SinhVien\\EditSinhVien.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\SinhVien\\EditSinhVien.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAmwDQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T13:21:59.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "SinhVien.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\SinhVien.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Models\\SinhVien.cs",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\SinhVien.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Models\\SinhVien.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:53:07.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TaiKhoan.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Models\\TaiKhoan.cs",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\TaiKhoan.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Models\\TaiKhoan.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:52:49.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GiangVienController.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\GiangVienController.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Controllers\\GiangVienController.cs",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\GiangVienController.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Controllers\\GiangVienController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:15:35.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Khoa.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\Khoa.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Models\\Khoa.cs",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\Khoa.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Models\\Khoa.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:41:26.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "GiangVien.cs",
               "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\GiangVien.cs",
               "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Models\\GiangVien.cs",
               "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\GiangVien.cs",
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Models\\GiangVien.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T12:44:52.745Z"
+              "WhenOpened": "2024-10-27T12:44:52.745Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAmwCQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T12:25:26.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T10:41:13.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EditGiangVien.cshtml",
+              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\GiangVien\\EditGiangVien.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\GiangVien\\EditGiangVien.cshtml",
+              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\GiangVien\\EditGiangVien.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\GiangVien\\EditGiangVien.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAACMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T12:53:25.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Program.cs",
               "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Program.cs",
               "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Program.cs",
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAB7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T12:21:32.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\appsettings.json",
               "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\appsettings.json",
               "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\appsettings.json",
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-27T12:20:01.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "DKTQDNContext.cs",
               "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\DKTQDNContext.cs",
               "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Models\\DKTQDNContext.cs",
@@ -224,19 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-27T10:41:13.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "site.css",
               "DocumentMoniker": "D:\\ASP\\ASP-.NET---TDC---2024\\ASP .NET\\Files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\wwwroot\\css\\site.css",
