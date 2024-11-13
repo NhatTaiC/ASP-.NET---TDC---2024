@@ -55,8 +55,7 @@
               "ViewState": "AgIAACwAAAAAAAAAAAAAwC8AAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T08:55:12.029Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -81,8 +80,7 @@
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChuyenDi\\EditChuyenDi.cshtml",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAGIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T10:22:28.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T10:22:28.072Z"
             },
             {
               "$type": "Document",
@@ -94,8 +92,7 @@
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\EditChiTietDangKy.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T10:17:00.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T10:17:00.428Z"
             },
             {
               "$type": "Document",
@@ -107,8 +104,7 @@
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChuyenDi\\ChuyenDiList.cshtml",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T10:13:23.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T10:13:23.83Z"
             },
             {
               "$type": "Document",
@@ -120,8 +116,7 @@
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\CreateChiTietDangKy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T10:11:38.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T10:11:38.328Z"
             },
             {
               "$type": "Document",
@@ -133,8 +128,7 @@
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\ChiTietDangKyList.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAEIAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T10:10:44.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T10:10:44.35Z"
             },
             {
               "$type": "Document",
@@ -146,8 +140,7 @@
               "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Controllers\\ChuyenDiController.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAxwHEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T10:08:35.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T10:08:35.917Z"
             }
           ]
         }
