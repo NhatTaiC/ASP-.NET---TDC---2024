@@ -6,6 +6,19 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DKTQDNContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
+
+//builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+//options.SignIn.RequireConfirmedAccount = false)
+//.AddEntityFrameworkStores<ApplicationDbContext>();
+//builder.Services.AddDef
+
+builder.Services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(
+    builder.Configuration.GetConnectionString("conn")));
+
+builder.Services.AddIdentityCore<ApplicationUser>(options =>
+options.SignIn.RequireConfirmedAccount = false)
+.AddEntityFrameworkStores<ApplicationDbContext>();
+
 var app = builder.Build();
 
 
@@ -21,6 +34,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 
 app.UseAuthorization();
 

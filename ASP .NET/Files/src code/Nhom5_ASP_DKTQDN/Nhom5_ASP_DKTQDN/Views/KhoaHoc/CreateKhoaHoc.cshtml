@@ -1,18 +1,18 @@
 ﻿@model Nhom5_ASP_DKTQDN.Models.KhoaHoc
 
 @{
-    ViewData["Title"] = "Sửa khóa học";
+    ViewData["Title"] = "Thêm khóa học";
 }
 
-<h1>Sửa khóa học</h1>
+<h1>Thêm khóa học</h1>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
     </div>
     <div class="col-md-4">
-        <form asp-action="EditKhoaHoc">
+        <form asp-action="CreateKhoaHoc" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="MaKhoaHoc" class="control-label">Mã khóa học</label>
                 <input asp-for="MaKhoaHoc" class="form-control" />
@@ -29,16 +29,31 @@
                 <span asp-validation-for="NamKetThuc" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Lưu" class="btn btn-primary" />
+                <input type="submit" value="Thêm" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="KhoaHoc" asp-action="KhoaHocList">Back to List</a>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+@{
+    var errorMessageCreate = TempData["ErrorMessageCreate"] as string;
+}
+
+@if (!string.IsNullOrEmpty(errorMessageCreate))
+{
+    <script>
+        Swal.fire({
+            title: 'Thông báo',
+            text: 'Mã trùng. Vui lòng kiểm tra lại!',
+            icon: 'error',
+            confirmButtonText: 'Đóng'
+        });
+    </script>
 }
