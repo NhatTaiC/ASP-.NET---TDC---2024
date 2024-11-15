@@ -19,6 +19,8 @@ builder.Services.AddIdentityCore<ApplicationUser>(options =>
 options.SignIn.RequireConfirmedAccount = false)
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+
+
 var app = builder.Build();
 
 
