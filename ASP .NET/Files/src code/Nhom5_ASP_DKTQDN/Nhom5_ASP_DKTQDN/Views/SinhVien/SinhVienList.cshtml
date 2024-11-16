@@ -25,7 +25,7 @@
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdKhoa)
+                Khoa
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IdTaiKhoan)
@@ -68,13 +68,13 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.IdKhoa)
+                    @Html.DisplayFor(modelItem => item.IdKhoaNavigation.TenKhoa)
                 </th>
                 <th>
                     @Html.DisplayFor(modelItem => item.IdTaiKhoan)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.IdKhoaHoc)
+                    @Html.DisplayFor(modelItem => item.IdKhoaHocNavigation.MaKhoaHoc)
                 </th>
                 <td>
                     @Html.DisplayFor(modelItem => item.IsDeleted)

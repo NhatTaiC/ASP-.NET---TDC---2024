@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Nhom5_ASP_DKTQDN.Models;
 
 namespace Nhom5_ASP_DKTQDN.Controllers
@@ -24,7 +25,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
 
 		public IActionResult SinhVienList()
 		{
-			var sinhVien = _DKTQDNContext.SinhViens.ToList();
+			var sinhVien = _DKTQDNContext.SinhViens.Include(kh => kh.IdKhoaHocNavigation).Include(kh => kh.IdKhoaNavigation).ToList();
 			return View(sinhVien);
 		}
 

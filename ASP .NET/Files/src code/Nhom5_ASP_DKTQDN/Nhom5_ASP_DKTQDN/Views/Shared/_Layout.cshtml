@@ -20,18 +20,55 @@
                 <p>Điện thoại : 08.38970023 - 08.38972339 - 08.38966825, Fax : 08.38962474</p>
             </div>
         </div>
-        <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="GiangVien" asp-action="GiangVienList">Privacy</a>
-            </li>
-        </ul>
     </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm" style="width: 100%; margin: 0; padding: 0;height: 100px;">
+
+        <!-- Logo hoặc Tiêu đề -->
+        @* <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">My Website</a> *@
+
+        <!-- Nút toggle cho thiết bị di động -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigationMenu" aria-controls="navigationMenu" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu điều hướng chính -->
+        <div class="collapse navbar-collapse" id="navigationMenu">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Các liên kết điều hướng -->
+                <li class="nav-item">
+                    <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Đăng Nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Đăng kí tham quan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="GiangVien" asp-action="GiangVienList">Lịch sử đăng kí</a>
+                </li>
+                <!-- Dropdown menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="additionalLinks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Quản lý
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="additionalLinks">
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Contact">Quản lý chuyến đi</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="About">Quản lý khoa</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Help">Quản lí sinh viên</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Help">Quản lí Khóa học</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Help">Quản lí doanh nghiệp</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Help">Quản lí giảng viên</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Help">Quản lí tài khoản</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Form tìm kiếm tùy chọn -->
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+
+    </nav>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

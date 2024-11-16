@@ -4,72 +4,84 @@
     ViewData["Title"] = "EditGiangVien";
 }
 
-<h1>Sửa giảng viên</h1>
+<h1 class="text-center mb-4">Sửa giảng viên</h1>
 
-<h4>GiangVien</h4>
+<h4 class="text-primary">GiangVien</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="EditGiangVien">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="EditGiangVien" class="p-4 border rounded shadow-sm">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="MaGiangVien" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="MaGiangVien" class="control-label fw-bold">Mã giảng viên</label>
                 <input asp-for="MaGiangVien" class="form-control" />
                 <span asp-validation-for="MaGiangVien" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="TenGiangVien" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="TenGiangVien" class="control-label fw-bold">Tên giảng viên</label>
                 <input asp-for="TenGiangVien" class="form-control" />
                 <span asp-validation-for="TenGiangVien" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SoDienThoai" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="SoDienThoai" class="control-label fw-bold">Số điện thoại</label>
                 <input asp-for="SoDienThoai" class="form-control" />
                 <span asp-validation-for="SoDienThoai" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IdKhoa" class="control-label"></label>
-                <select asp-for="IdKhoa" class="form-control" asp-items="@ViewBag.KhoaSelectList">
+
+            <div class="form-group mb-3">
+                <label asp-for="IdKhoa" class="control-label fw-bold">Khoa</label>
+                <select asp-for="IdKhoa" class="form-control">
                     <option value="None">Select</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label asp-for="IsDeleted" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="IsDeleted" class="control-label fw-bold">Trạng thái</label>
                 <input asp-for="IsDeleted" class="form-control" />
                 <span asp-validation-for="IsDeleted" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="CreatedBy" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="CreatedBy" class="control-label fw-bold">Người tạo</label>
                 <input asp-for="CreatedBy" class="form-control" />
                 <span asp-validation-for="CreatedBy" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="CreatedAt" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="CreatedAt" class="control-label fw-bold">Ngày tạo</label>
                 <input asp-for="CreatedAt" class="form-control" />
                 <span asp-validation-for="CreatedAt" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="UpdatedBy" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="UpdatedBy" class="control-label fw-bold">Người cập nhật</label>
                 <input asp-for="UpdatedBy" class="form-control" />
                 <span asp-validation-for="UpdatedBy" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="UpdatedAt" class="control-label"></label>
+
+            <div class="form-group mb-3">
+                <label asp-for="UpdatedAt" class="control-label fw-bold">Ngày cập nhật</label>
                 <input asp-for="UpdatedAt" class="form-control" />
                 <span asp-validation-for="UpdatedAt" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+
+            <div class="form-group text-center mt-4">
+                <input type="submit" value="Save" class="btn btn-primary px-4" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

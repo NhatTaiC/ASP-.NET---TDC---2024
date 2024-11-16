@@ -1,20 +1,20 @@
 ﻿html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .header-container {
@@ -73,10 +73,39 @@ body {
 
 
 .footer-container {
-    background-color: #000; 
+    background-color: #000;
     color: white;
     text-align: center;
     padding: 15px 0;
     font-family: Arial, sans-serif;
     font-size: 14px;
 }
+
+/* Đảm bảo thanh điều hướng full màn hình */
+.navbar {
+    width: 100vw;
+    max-width: 100%;
+}
+
+/* Nội dung điều hướng full chiều rộng */
+.navbar-collapse {
+    width: 100%;
+}
+
+body1 {
+    padding: 0;
+    margin: 0;
+}
+
+/* Tăng kích thước chữ cho các liên kết trong thanh điều hướng */
+.navbar-nav .nav-link {
+    font-size: 30px; /* Thay đổi kích thước chữ, ví dụ 18px */
+}
+
+/* Tăng kích thước chữ cho các mục dropdown */
+.navbar-nav .dropdown-menu .dropdown-item {
+    font-size: 30px; /* Thay đổi kích thước chữ trong menu dropdown */
+}
+
+
+
