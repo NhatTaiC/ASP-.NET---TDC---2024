@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace Nhom5_ASP_DKTQDN.Controllers
 {
@@ -10,18 +14,63 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         private readonly ILogger<ChuyenDiController> _logger;
         private readonly DKTQDNContext _DKTQDNContext;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ChuyenDiController(ILogger<ChuyenDiController> logger, DKTQDNContext dKTQDNContext, IWebHostEnvironment webHostEnvironment)
+        public ChuyenDiController(ILogger<ChuyenDiController> logger, DKTQDNContext dKTQDNContext, IWebHostEnvironment webHostEnvironment, UserManager<ApplicationUser> userManager)
         {
             _logger = logger;
             _DKTQDNContext = dKTQDNContext;
             _webHostEnvironment = webHostEnvironment;
+            _userManager = userManager;
         }
+        [Authorize]
+        public  IActionResult ViewDangKyChuyenDi()
+        {
+
+            string? email = _userManager.GetUserName(User) ?? string.Empty;
+            var sinhvien = _DKTQDNContext.SinhViens.FirstOrDefault(sv => sv.Email == email);
+            int idKhoa = sinhvien.IdKhoa;
+            var chuyenDi = _DKTQDNContext.ChuyenDis.Where(cd=>cd.IsDeleted == 0 && cd.TrangThai == 0 && cd.IdKhoa == idKhoa)
+                                                   .Include(dn=> dn.IdDoanhNghiepNavigation)
+                                                   .Include(dn => dn.IdGiangVienNavigation)
+                                                   .Include(dn => dn.IdKhoaHocNavigation).ToList();
+
+            var soNguoiDangKy = _DKTQDNContext.ChiTietDangKies
+                                       .Where(dk => dk.IsDeleted == 0)
+                                       .GroupBy(dk => dk.IdChuyenDi)
+                                       .Select(g => new
+                                       {
+                                           IdChuyenDi = g.Key,
+                                           SoNguoiDaDangKy = g.Count()
+                                       }).ToList();
+
+            // Gán số người đã đăng ký vào các chuyến đi
+            foreach (var cd in chuyenDi)
+            {
+                cd.SoNguoiDaDangKy = soNguoiDangKy
+                                        .FirstOrDefault(s => s.IdChuyenDi == cd.Id)?.SoNguoiDaDangKy ?? 0;
+            }
+            ViewBag.hehe = sinhvien.TenSinhVien;
+
+            return View(chuyenDi);
+        }
+        //public async Task RegisterAsync(string username, string password)
+        //{
+        //    var user = new ApplicationUser { UserName = username };
+        //    var result = await _userManager.CreateAsync(user, password);
+
+        //    if (!result.Succeeded)
+        //    {
+        //        // Ghi log hoặc xử lý lỗi nếu việc tạo tài khoản không thành công
+        //        _logger.LogError("Không thể tạo tài khoản cho {Username}: {Errors}", username, string.Join(", ", result.Errors.Select(e => e.Description)));
+        //    }
+        //}
 
         public IActionResult Index()
         {
             return View();
         }
+
         public IActionResult Privacy()
         {
             return View();
@@ -36,7 +85,11 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         //Hiện danh sách chuyen di
         public IActionResult ChuyenDiList()
         {
-            var chuyenDi = _DKTQDNContext.ChuyenDis.ToList();
+            var chuyenDi = _DKTQDNContext.ChuyenDis.Include(gv=>gv.IdGiangVienNavigation)
+                                                   .Include(gv => gv.IdDoanhNghiepNavigation)
+                                                   .Include(gv => gv.IdKhoaHocNavigation)
+                                                   .Include(gv => gv.IdKhoaNavigation)
+                                                   .ToList();
             return View(chuyenDi);
         }
 

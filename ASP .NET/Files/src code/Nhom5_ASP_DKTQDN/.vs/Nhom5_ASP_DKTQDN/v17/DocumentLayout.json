@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,48 @@
       "DocumentGroups": [
         {
           "DockedHeight": 272,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "home.css",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\wwwroot\\css\\home.css",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\wwwroot\\css\\home.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-16T17:13:42.172Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T16:49:43.873Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Models\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Models\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:05:21.76Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T17:20:05.066Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {

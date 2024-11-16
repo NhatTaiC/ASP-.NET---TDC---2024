@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Nhom5_ASP_DKTQDN.Models
 {
@@ -26,6 +27,8 @@ namespace Nhom5_ASP_DKTQDN.Models
         public DateTime CreatedAt { get; set; }
         public int UpdatedBy { get; set; }
         public DateTime UpdatedAt { get; set; }
+        [NotMapped] // Thuộc tính này không được ánh xạ vào database
+        public int SoNguoiDaDangKy { get; set; }
 
         public virtual DoanhNghiep IdDoanhNghiepNavigation { get; set; } = null!;
         public virtual GiangVien IdGiangVienNavigation { get; set; } = null!;
