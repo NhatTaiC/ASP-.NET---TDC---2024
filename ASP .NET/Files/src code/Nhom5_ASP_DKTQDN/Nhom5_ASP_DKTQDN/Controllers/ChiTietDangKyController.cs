@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
 
@@ -10,12 +13,75 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         private readonly ILogger<ChiTietDangKyController> _logger;
         private readonly DKTQDNContext _DKTQDNContext;
         private IWebHostEnvironment _webHostEnvironment;
-
-        public ChiTietDangKyController(ILogger<ChiTietDangKyController> logger, DKTQDNContext dKTQDNContext, IWebHostEnvironment webHostEnvironment)
+        private readonly UserManager<ApplicationUser> _userManager;
+        public ChiTietDangKyController(ILogger<ChiTietDangKyController> logger, DKTQDNContext dKTQDNContext, IWebHostEnvironment webHostEnvironment, UserManager<ApplicationUser> userManager)
         {
             _logger = logger;
             _DKTQDNContext = dKTQDNContext;
             _webHostEnvironment = webHostEnvironment;
+            _userManager = userManager;
+        }
+        [Authorize]
+        public IActionResult DangKyChuyenDi(int id)
+        {
+            var sinhVien = _DKTQDNContext.SinhViens.FirstOrDefault(x => x.Email == _userManager.GetUserName(User));
+            var kiemtrachitietdangky = _DKTQDNContext.ChiTietDangKies.FirstOrDefault(oj=>oj.IsDeleted == 0 
+                                                                            && oj.IdChuyenDi == id
+                                                                            && oj.IdSinhVien == sinhVien.Id);
+            var chuyendi = _DKTQDNContext.ChuyenDis.FirstOrDefault(oj => oj.IsDeleted == 0
+                                                                            && oj.Id == id
+                                                                            && oj.TrangThai == 0);
+
+            var soNguoiDangKy = _DKTQDNContext.ChiTietDangKies
+                                       .Where(dk => dk.IsDeleted == 0)
+                                       .GroupBy(dk => dk.IdChuyenDi)
+                                       .Select(g => new
+                                       {
+                                           IdChuyenDi = g.Key,
+                                           SoNguoiDaDangKy = g.Count()
+                                       }).ToList();
+           int sum = soNguoiDangKy.FirstOrDefault(oj=>oj.IdChuyenDi.Equals(id))?.SoNguoiDaDangKy ?? 0;
+
+            if (kiemtrachitietdangky == null)
+            {
+                if(chuyendi.Slot > sum)
+                {
+                    ChiTietDangKy ctDangKy = new ChiTietDangKy
+                    {
+                        IdSinhVien = sinhVien.Id,
+                        IdChuyenDi = id,
+                        NgayDangKy = DateTime.Now.Date,
+                        IsDeleted = 0,
+                        CreatedAt = DateTime.Now,
+                        CreatedBy = 0,
+                        UpdatedAt = DateTime.Now,
+                        UpdatedBy = 0,
+                    };
+                    _DKTQDNContext.ChiTietDangKies.Add(ctDangKy);
+                    _DKTQDNContext.SaveChanges();
+                    TempData["SuccessMessageDangKy"] = "hehe";
+                    return RedirectToAction("ViewDangKyChuyenDi", "ChuyenDi");
+                }
+                else
+                {
+                    TempData["dusoluong"] = "hehe";
+                    return RedirectToAction("ViewDangKyChuyenDi", "ChuyenDi");
+                }
+
+            }
+            else
+            {
+                TempData["ErorrMessageDangKy"] = "hehe";
+                return RedirectToAction("ViewDangKyChuyenDi", "ChuyenDi");
+            }
+            
+        }
+        //Hiện danh sách đăng kí
+        [Authorize]
+        public IActionResult DanhSachDangKi(int id)
+        {
+            var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.Where(oj=>oj.IdChuyenDi == id).Include(sv=>sv.IdSinhVienNavigation). ToList();
+            return View(chiTietDangKy);
         }
         public IActionResult Index()
         {
