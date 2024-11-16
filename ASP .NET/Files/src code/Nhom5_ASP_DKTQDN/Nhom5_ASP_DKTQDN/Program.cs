@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Nhom5_ASP_DKTQDN.Models;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,7 +33,22 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+        var context = services.GetRequiredService<DKTQDNContext>();
 
+        await SeedDataAsync(context, userManager);
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Lỗi khi tạo dữ liệu mẫu");
+    }
+}
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -52,3 +67,32 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+static async Task SeedDataAsync(DKTQDNContext context, UserManager<ApplicationUser> userManager)
+{
+    var sinhvien = context.SinhViens.ToList();
+    foreach (var sv in sinhvien)
+    {
+        var existingUser = await userManager.FindByNameAsync(sv.Email);
+        if (existingUser == null)
+        {
+            var result = await userManager.CreateAsync(new ApplicationUser
+            {
+                UserName = sv.Email,
+                Email = sv.Email
+            }, "User@123");
+
+            if (result.Succeeded)
+            {
+                Console.WriteLine($"Tạo tài khoản thành công cho sinh viên: {sv.Email}");
+            }
+            else
+            {
+                Console.WriteLine($"Không thể tạo tài khoản cho {sv.Email}: {string.Join(", ", result.Errors.Select(e => e.Description))}");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Tài khoản đã tồn tại: {sv.Email}");
+        }
+    }
+}
