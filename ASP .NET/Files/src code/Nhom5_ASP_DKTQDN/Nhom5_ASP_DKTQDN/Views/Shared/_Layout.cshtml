@@ -9,18 +9,23 @@
     <link rel="stylesheet" href="~/Nhom5_ASP_DKTQDN.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-        body {
-            background-image: url('/css/background.jpg');
-            background-size: cover; /* Tự động điều chỉnh kích thước để phủ đầy */
-            background-repeat: no-repeat; /* Không lặp lại hình nền */
-            background-position: center center; /* Căn giữa hình ảnh */
-        }
-    </style>
+    <link href="~/css/home.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        @* <header> *@
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="/css/logofooter_fit_tdc.png" alt="Logo">
+            </div>
+            <div class="header-text">
+                <h1>TRƯỜNG CAO ĐẲNG CÔNG NGHỆ THỦ ĐỨC</h1>
+                <p>Địa chỉ : 53 Võ Văn Ngân - Phường Linh Chiểu - Quận Thủ Đức - TP.HCM</p>
+                <p>Điện thoại : 08.38970023 - 08.38972339 - 08.38966825, Fax : 08.38962474</p>
+            </div>
+        </div>
+    @* </header> *@
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Nhom5_ASP_DKTQDN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -44,7 +49,8 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid">
+
+    <div class="container-fluid" id="main-bg">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
