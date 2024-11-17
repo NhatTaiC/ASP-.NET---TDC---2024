@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="~/Nhom5_ASP_DKTQDN.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            background-image: url('/css/background.jpg');
+            background-size: cover; /* Tự động điều chỉnh kích thước để phủ đầy */
+            background-repeat: no-repeat; /* Không lặp lại hình nền */
+            background-position: center center; /* Căn giữa hình ảnh */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -36,7 +44,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
