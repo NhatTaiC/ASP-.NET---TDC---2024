@@ -14,14 +14,14 @@ namespace Nhom5_ASP_DKTQDN.Models
 
         public int Id { get; set; }
         public string? MaKhoa { get; set; }
-        public string TenKhoa { get; set; } = null!;
-        public string SoDienThoai { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public int IsDeleted { get; set; }
-        public int CreatedBy { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public int UpdatedBy { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public string? TenKhoa { get; set; }
+        public string? SoDienThoai { get; set; }
+        public string? Email { get; set; }
+        public int? IsDeleted { get; set; }
+        public int? CreatedBy { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public int? UpdatedBy { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
         public virtual ICollection<ChuyenDi> ChuyenDis { get; set; }
         public virtual ICollection<GiangVien> GiangViens { get; set; }

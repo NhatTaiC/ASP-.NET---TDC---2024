@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
-using System.Security.Claims;
 
 namespace Nhom5_ASP_DKTQDN.Controllers
 {
@@ -24,14 +23,14 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             _userManager = userManager;
         }
         [Authorize]
-        public  IActionResult ViewDangKyChuyenDi()
+        public IActionResult ViewDangKyChuyenDi()
         {
 
             string? email = _userManager.GetUserName(User) ?? string.Empty;
             var sinhvien = _DKTQDNContext.SinhViens.FirstOrDefault(sv => sv.Email == email);
-            int idKhoa = sinhvien.IdKhoa;
-            var chuyenDi = _DKTQDNContext.ChuyenDis.Where(cd=>cd.IsDeleted == 0 && cd.TrangThai == 0 && cd.IdKhoa == idKhoa)
-                                                   .Include(dn=> dn.IdDoanhNghiepNavigation)
+            int idKhoa = (int)sinhvien.IdKhoa;
+            var chuyenDi = _DKTQDNContext.ChuyenDis.Where(cd => cd.IsDeleted == 0 && cd.TrangThai == 0 && cd.IdKhoa == idKhoa)
+                                                   .Include(dn => dn.IdDoanhNghiepNavigation)
                                                    .Include(dn => dn.IdGiangVienNavigation)
                                                    .Include(dn => dn.IdKhoaHocNavigation).ToList();
 
@@ -85,7 +84,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         //Hiện danh sách chuyen di
         public IActionResult ChuyenDiList()
         {
-            var chuyenDi = _DKTQDNContext.ChuyenDis.Include(gv=>gv.IdGiangVienNavigation)
+            var chuyenDi = _DKTQDNContext.ChuyenDis.Include(gv => gv.IdGiangVienNavigation)
                                                    .Include(gv => gv.IdDoanhNghiepNavigation)
                                                    .Include(gv => gv.IdKhoaHocNavigation)
                                                    .Include(gv => gv.IdKhoaNavigation)
@@ -98,8 +97,8 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         {
             var chuyenDi = _DKTQDNContext.ChuyenDis.ToList();
             var giangVien = _DKTQDNContext.GiangViens.ToList();
-            var  doanhNghiep = _DKTQDNContext.DoanhNghieps.ToList();
-            var khoa = _DKTQDNContext.Khoas.ToList();   
+            var doanhNghiep = _DKTQDNContext.DoanhNghieps.ToList();
+            var khoa = _DKTQDNContext.Khoas.ToList();
             var khoaHoc = _DKTQDNContext.KhoaHocs.ToList();
 
             ViewBag.ChuyenDiSelectList = new SelectList(chuyenDi, "Id", "MaChuyenDi");
@@ -115,11 +114,12 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         [HttpPost]
         public IActionResult CreateChuyenDi(ChuyenDi chuyenDi)
         {
+            chuyenDi.TrangThai = 0;
             chuyenDi.IsDeleted = 0;
-            chuyenDi.CreatedAt = DateTime.Now;
+            chuyenDi.CreatedAt = DateTime.Now.Date;
             chuyenDi.CreatedBy = 0;
             chuyenDi.UpdatedBy = 0;
-            chuyenDi.UpdatedAt = DateTime.Now;
+            chuyenDi.UpdatedAt = DateTime.Now.Date;
 
             _DKTQDNContext.ChuyenDis.Add(chuyenDi);
             _DKTQDNContext.SaveChanges();
@@ -155,11 +155,12 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         [HttpPost]
         public IActionResult EditChuyenDi(ChuyenDi chuyenDi)
         {
+            chuyenDi.TrangThai = 0;
             chuyenDi.IsDeleted = 0;
-            chuyenDi.CreatedAt = DateTime.Now;
+            chuyenDi.CreatedAt = DateTime.Now.Date;
             chuyenDi.CreatedBy = 0;
             chuyenDi.UpdatedBy = 0;
-            chuyenDi.UpdatedAt = DateTime.Now;
+            chuyenDi.UpdatedAt = DateTime.Now.Date;
 
             _DKTQDNContext.ChuyenDis.Update(chuyenDi);
             _DKTQDNContext.SaveChanges();

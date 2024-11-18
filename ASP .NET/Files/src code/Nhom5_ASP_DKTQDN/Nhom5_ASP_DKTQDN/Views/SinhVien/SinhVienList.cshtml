@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "SinhVienList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
 }
 
 <h1>SinhVienList</h1>
@@ -68,7 +69,7 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.IdKhoa)
+                    @Html.DisplayFor(modelItem => item.IdKhoaNavigation.TenKhoa)
                 </th>
                 <th>
                     @Html.DisplayFor(modelItem => item.IdTaiKhoan)
