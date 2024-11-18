@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Tham quan doanh nghiệp @item.IdDoanhNghiepNavigation.TenDoanhNghiep</h5>
                     <p class="card-text">Giảng viên: @item.IdGiangVienNavigation.TenGiangVien</p>
-                    <p class="card-text">Ngày tham quan: @item.NgayThamQuan.ToString("dd/MM/yyyy")</p>
+                    <p class="card-text">Ngày tham quan: @item.NgayThamQuan?.ToString("dd/MM/yyyy")</p>
                     <p class="card-text">Slot: @item.SoNguoiDaDangKy/@item.Slot</p>
                     <a asp-controller="ChiTietDangKy" asp-action="DangKyChuyenDi" asp-route-id="@item.Id" class="btn btn-primary">Đăng kí</a>
                 </div>
