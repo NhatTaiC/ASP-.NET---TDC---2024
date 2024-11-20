@@ -6,7 +6,7 @@
     Layout = "~/Views/Shared/_Layout - Admin.cshtml";
 }
 
-<h1>SinhVienList</h1>
+<h1>Danh sách sinh viên</h1>
 
 <p>
     <a asp-action="CreateSinhVien" class="btn btn-primary">Thêm Sinh Viên</a>
@@ -94,8 +94,8 @@
                     @Html.DisplayFor(modelItem => item.UpdatedAt)
                 </td> *@
                 <td>
-                    <a asp-action="EditSinhVien" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> |
-                        <a onclick ="confirmDelete(@item.Id)" class="btn btn-danger">Delete</a>
+                    <a asp-action="EditSinhVien" asp-route-id="@item.Id" class="btn btn-primary">Sửa</a> |
+                        <a onclick ="confirmDelete(@item.Id)" class="btn btn-danger">Xóa</a>
                 </td>
             </tr>
         }

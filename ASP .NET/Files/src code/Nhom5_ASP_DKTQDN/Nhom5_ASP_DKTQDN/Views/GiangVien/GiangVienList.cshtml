@@ -82,8 +82,8 @@
 					@Html.DisplayFor(modelItem => item.IdKhoaNavigation.Id)
 				</td> *@
 				<td>
-					<a asp-action="EditGiangVien" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
-						<a onclick="confirmDelete(@item.Id)" class="btn btn-danger">Delete</a>
+					<a asp-action="EditGiangVien" asp-route-id="@item.Id" class="btn btn-primary">Sửa</a>
+						<a onclick="confirmDelete(@item.Id)" class="btn btn-danger">Xóa</a>
 				</td>
 			</tr>
 		}
