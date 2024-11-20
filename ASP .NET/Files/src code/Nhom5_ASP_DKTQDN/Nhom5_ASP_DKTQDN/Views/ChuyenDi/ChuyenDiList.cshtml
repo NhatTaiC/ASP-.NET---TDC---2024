@@ -1,13 +1,16 @@
 ﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.ChuyenDi>
+@using X.PagedList
+@using X.PagedList.Mvc.Core
 
 @{
     ViewData["Title"] = "ChuyenDiList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
 }
 
-<h1>ChuyenDiList</h1>
+<h1>Danh sách chuyến đi</h1>
 
 <p>
-    <a asp-action="CreateChuyenDi">Create New</a>
+    <a asp-action="CreateChuyenDi">Tạo mới</a>
 </p>
 <table class="table">
     <thead>
@@ -19,7 +22,7 @@
                 Giảng viên
             </th>
             <th>
-                    
+                    Mã khoa
             </th>
             <th>
                 Khoa
@@ -83,11 +86,20 @@
             </td>
    
             <td>
-                <a asp-action="EditChuyenDi" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="EditChuyenDi" asp-route-id="@item.Id">Sửa</a>|
                 <a asp-action="DanhSachDangKi" asp-controller="ChiTietDangKy" asp-route-id="@item.Id">Danh sách đăng kí</a> |
-                <a asp-action="DeleteChuyenDi" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="DeleteChuyenDi" asp-route-id="@item.Id">Xóa</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("ChuyenDiList",
+                new { page = page }),
+                new X.PagedList.Mvc.Core.PagedListRenderOptions
+            {
+                ContainerDivClasses = new[] { "navigation" },
+                LiElementClasses = new[] { "page-item" },
+                PageClasses = new[] { "page-link" }
+            }
+                )

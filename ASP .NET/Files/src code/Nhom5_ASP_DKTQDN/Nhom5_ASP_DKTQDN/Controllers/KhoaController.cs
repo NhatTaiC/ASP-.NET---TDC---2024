@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
 using X.PagedList;
@@ -15,11 +16,13 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             _dKTQDNContext = dKTQDN;
         }
 
+        [Authorize]
         public IActionResult KhoaList(int? page)
         {
             var khoaList = _dKTQDNContext.Khoas.ToPagedList(page ?? 1, 10);
             return View(khoaList);
         }
+        [Authorize]
         public IActionResult DeleteKhoa(int id)
         {
             Khoa obj = _dKTQDNContext.Khoas.SingleOrDefault(d => d.Id == id);
@@ -30,11 +33,13 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             }
             return RedirectToAction("DoanhNghiepList");
         }
+        [Authorize]
         public IActionResult KhoaUpdate(int? id)
         {
             Khoa objKhoa = _dKTQDNContext.Khoas.FirstOrDefault(d => d.Id == id);
             return View(objKhoa);
         }
+        [Authorize]
         public IActionResult CreateKhoa(Khoa obj)
         {
             _dKTQDNContext.Add(obj);
