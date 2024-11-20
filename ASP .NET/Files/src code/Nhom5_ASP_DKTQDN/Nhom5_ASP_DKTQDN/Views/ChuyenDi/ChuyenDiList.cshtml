@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.ChuyenDi>
+
+@{
+    ViewData["Title"] = "ChuyenDiList";
+}
+
+<h1>ChuyenDiList</h1>
+
+<p>
+    <a asp-action="CreateChuyenDi">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên doanh nghiệp
+            </th>
+            <th>
+                Giảng viên
+            </th>
+            <th>
+                    
+            </th>
+            <th>
+                Khoa
+            </th>
+            <th>
+                Ngày tham quan
+            </th>
+            <th>
+                Slot
+            </th>
+            <th>
+                Trạng thái
+            </th>
+            <th>
+               Học kì
+            </th>
+            <th>
+                Năm học
+            </th>        
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdDoanhNghiepNavigation.TenDoanhNghiep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdGiangVienNavigation.TenGiangVien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdKhoaHocNavigation.MaKhoaHoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdKhoaNavigation.TenKhoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayThamQuan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Slot)
+            </td>
+                @if (item.TrangThai == 0)
+                {
+                    <td style="color:green">
+                        Hoạt động
+                    </td>
+                }
+                else
+                {
+                    <td style="color:red">
+                        Đang đóng
+                    </td>
+                }           
+            <td>
+                @Html.DisplayFor(modelItem => item.HocKi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamHoc)
+            </td>
+   
+            <td>
+                <a asp-action="EditChuyenDi" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="DanhSachDangKi" asp-controller="ChiTietDangKy" asp-route-id="@item.Id">Danh sách đăng kí</a> |
+                <a asp-action="DeleteChuyenDi" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

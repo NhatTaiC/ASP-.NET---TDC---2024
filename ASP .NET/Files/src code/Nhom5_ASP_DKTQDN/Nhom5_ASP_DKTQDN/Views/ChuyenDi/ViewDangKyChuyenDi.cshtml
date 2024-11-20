@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.ChuyenDi>
+
+@{
+    ViewData["Title"] = "Đăng ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewBag.hehe</h1>
+<div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-9">
+        @foreach (var item in Model)
+        {
+            <div class="card w-75 mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Tham quan doanh nghiệp @item.IdDoanhNghiepNavigation.TenDoanhNghiep</h5>
+                    <p class="card-text">Giảng viên: @item.IdGiangVienNavigation.TenGiangVien</p>
+                    <p class="card-text">Ngày tham quan: @item.NgayThamQuan?.ToString("dd/MM/yyyy")</p>
+                    <p class="card-text">Slot: @item.SoNguoiDaDangKy/@item.Slot</p>
+                    <a asp-controller="ChiTietDangKy" asp-action="DangKyChuyenDi" asp-route-id="@item.Id" class="btn btn-primary">Đăng kí</a>
+                </div>
+            </div>
+        }
+    </div>  
+</div>
+@{
+    var successMessageDangKy = TempData["SuccessMessageDangKy"] as string;
+    var erorrMessageDangKy = TempData["ErorrMessageDangKy"] as string;
+    var dusoluong = TempData["dusoluong"] as string;
+    
+}
+
+@if (!string.IsNullOrEmpty(successMessageDangKy))
+{
+    <script>
+        Swal.fire({
+            title: 'Thông báo',
+            text: 'Đăng ký thành công!',
+            icon: 'success',
+            confirmButtonText: 'Đóng'
+        });
+    </script>
+}
+@if (!string.IsNullOrEmpty(erorrMessageDangKy))
+{
+    <script>
+        Swal.fire({
+            title: 'Thông báo',
+            text: 'Bạn đã đăng ký chuyến đi này rồi!',
+            icon: 'info',
+            confirmButtonText: 'Đóng'
+        });
+    </script>
+}
+@if (!string.IsNullOrEmpty(dusoluong))
+{
+    <script>
+        Swal.fire({
+            title: 'Thông báo',
+            text: 'Chuyến tham quan này đã đủ số lượng!',
+            icon: 'info',
+            confirmButtonText: 'Đóng'
+        });
+    </script>
+}
