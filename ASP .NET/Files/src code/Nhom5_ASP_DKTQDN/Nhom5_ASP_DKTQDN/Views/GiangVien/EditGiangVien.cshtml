@@ -1,0 +1,76 @@
+﻿@model Nhom5_ASP_DKTQDN.Models.GiangVien
+
+@{
+    ViewData["Title"] = "EditGiangVien";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h1>Sửa giảng viên</h1>
+
+@* <h4>GiangVien</h4> *@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditGiangVien">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="MaGiangVien" class="control-label">Mã giảng viên</label>
+                <input asp-for="MaGiangVien" class="form-control" />
+                <span asp-validation-for="MaGiangVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenGiangVien" class="control-label">Tên giảng viên</label>
+                <input asp-for="TenGiangVien" class="form-control" />
+                <span asp-validation-for="TenGiangVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SoDienThoai" class="control-label">Số điện thoại</label>
+                <input asp-for="SoDienThoai" class="form-control" />
+                <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdKhoa" class="control-label">Tên khoa</label>
+                <select asp-for="IdKhoa" class="form-control" asp-items="@ViewBag.KhoaSelectList">
+                    <option value="None">Select</option>
+                </select>
+            </div>
+           @*  <div class="form-group">
+                <label asp-for="IsDeleted" class="control-label"></label>
+                <input asp-for="IsDeleted" class="form-control" />
+                <span asp-validation-for="IsDeleted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedBy" class="control-label"></label>
+                <input asp-for="CreatedBy" class="form-control" />
+                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label"></label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedBy" class="control-label"></label>
+                <input asp-for="UpdatedBy" class="form-control" />
+                <span asp-validation-for="UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label"></label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="GiangVienList">Trở về</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

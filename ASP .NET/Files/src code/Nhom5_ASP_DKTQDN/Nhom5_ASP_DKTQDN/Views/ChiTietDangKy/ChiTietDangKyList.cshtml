@@ -1,0 +1,152 @@
+﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.ChiTietDangKy>
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+@{
+    ViewData["Title"] = "ChiTietDangKyList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h1>Danh sách chi tiết đăng ký</h1>
+
+<p>
+    <a asp-action="CreateChiTietDangKy">Tạo mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ngày đăng ký
+                @*  @Html.DisplayNameFor(model => model.NgayDangKy) *@
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th> *@
+            <th>
+                Mã chuyến đi
+                @* @Html.DisplayNameFor(model => model.IdChuyenDiNavigation) *@
+            </th>
+            <th>
+                Tên sinh viên
+                @*  @Html.DisplayNameFor(model => model.IdSinhVienNavigation) *@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDangKy)
+                </td>
+                @*  <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td> *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdChuyenDiNavigation.MaChuyenDi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdSinhVienNavigation.TenSinhVien)
+                </td>
+                <td>
+                        <a  class="btn btn-warning" asp-action="EditChiTietDangKy" asp-route-id="@item.Id">Sửa</a> |
+                    @* <a asp-action="Details" asp-route-id="@item.Id">Details</a> | *@
+                        <a type="button" class="btn btn-danger" onclick="confirmDelete(@item.Id)" @* asp-action="DeleteKhoaHoc" asp-route-id="@item.Id" *@>Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("ChiTietDangKyList",
+                new { page = page }),
+                new X.PagedList.Mvc.Core.PagedListRenderOptions
+            {
+                ContainerDivClasses = new[] { "navigation" },
+                LiElementClasses = new[] { "page-item" },
+                PageClasses = new[] { "page-link" }
+            }
+                )
+
+@{
+    var successMessageCreateChiTietDangKy = TempData["successMessageCreateChiTietDangKy"] as string;
+    var successMessageUpdateChiTietDangKy = TempData["successMessageUpdateChiTietDangKy"] as string;
+    var successMessageDeleteChiTietDangKy = TempData["successMessageDeleteChiTietDangKy"] as string;
+}
+
+@if (!string.IsNullOrEmpty(successMessageCreateChiTietDangKy))
+{
+                                                                    <script>
+                                                                        Swal.fire({
+                                                                            title: 'Thông báo',
+                                                                            text: 'Thêm thành công!',
+                                                                            icon: 'success',
+                                                                            confirmButtonText: 'Đóng'
+                                                                        });
+                                                                    </script>
+}
+
+@if (!string.IsNullOrEmpty(successMessageUpdateChiTietDangKy))
+{
+                                                                <script>
+                                                                    Swal.fire({
+                                                                        title: 'Thông báo',
+                                                                        text: 'Sửa thành công!',
+                                                                        icon: 'success',
+                                                                        confirmButtonText: 'Đóng'
+                                                                    });
+                                                                </script>
+}
+@if (!string.IsNullOrEmpty(successMessageDeleteChiTietDangKy))
+{
+                                                                        <script>
+                                                                            Swal.fire({
+                                                                                title: 'Thông báo',
+                                                                                text: 'Xóa thành công!',
+                                                                                icon: 'success',
+                                                                                confirmButtonText: 'Đóng'
+                                                                            });
+                                                                        </script>
+}
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Bạn có chắc chắn muốn xóa?',
+            text: "Hành động này không thể hoàn tác!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Xác nhận',
+            cancelButtonText: 'Hủy'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/ChiTietDangKy/DeleteChiTietDangKy/' + id;
+            }
+        });
+    }
+</script>

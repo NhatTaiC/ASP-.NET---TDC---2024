@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.ChiTietDangKy>
+
+@{
+    ViewData["Title"] = "DanhSachDangKi";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h1>Danh sách sinh viên đã đăng kí</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Mã sinh viên
+            </th>
+            <th>
+                Họ tên
+            </th>
+            <th>
+                Số điện thoại
+            </th>
+            <th>
+                Ngày đăng ký
+            </th>
+          
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSinhVienNavigation.MaSinhVien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSinhVienNavigation.TenSinhVien)
+            </td>
+            <td>
+                 @Html.DisplayFor(modelItem => item.IdSinhVienNavigation.SoDienThoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayDangKy)
+            </td>
+            <td>
+                    <a asp-action="DeleteChiTietDangKy" class="btn btn-danger" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

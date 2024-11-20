@@ -1,0 +1,113 @@
+﻿@model Nhom5_ASP_DKTQDN.Models.SinhVien
+
+@{
+    ViewData["Title"] = "Thêm sinh viên";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h1>Thêm sinh viên mới</h1>
+
+@* <h4>Sinh Viên</h4> *@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateSinhVien">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MaSinhVien" class="control-label">Mã sinh viên</label>
+                <input asp-for="MaSinhVien" class="form-control" />
+                <span asp-validation-for="MaSinhVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenSinhVien" class="control-label">Tên sinh viên</label>
+                <input asp-for="TenSinhVien" class="form-control" />
+                <span asp-validation-for="TenSinhVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SoDienThoai" class="control-label">Số điện thoại</label>
+                <input asp-for="SoDienThoai" class="form-control" />
+                <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdKhoa" class="control-label">Tên khoa</label>
+                <select asp-for="IdKhoa" class="form-control" asp-items="@ViewBag.KhoaSelectList">
+                    <option value="None">Select</option>
+                </select>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="IdTaiKhoan" class="control-label"></label>
+                <select asp-for="IdTaiKhoan" class="form-control" asp-items="@ViewBag.TaiKhoanSelectList">
+                    <option value="None">Select</option>
+                </select>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="IdKhoaHoc" class="control-label">Mã khóa học</label>
+                <select asp-for="IdKhoaHoc" class="form-control" asp-items="@ViewBag.KhoaHocsSelectList">
+                    <option value="None">Select</option>
+                </select>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="IsDeleted" class="control-label"></label>
+                <input asp-for="IsDeleted" class="form-control" />
+                <span asp-validation-for="IsDeleted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedBy" class="control-label"></label>
+                <input asp-for="CreatedBy" class="form-control" />
+                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label"></label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedBy" class="control-label"></label>
+                <input asp-for="UpdatedBy" class="form-control" />
+                <span asp-validation-for="UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label"></label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <input type="submit" value="Thêm" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="SinhVienList">Trở về</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+@{
+    var errorMessageCreateSV = TempData["ErrorMessageCreateSV"] as string;
+
+}
+
+@if (!string.IsNullOrEmpty(errorMessageCreateSV))
+{
+                <script>
+                    Swal.fire({
+                        title: 'Thông báo',
+                        text: 'Email trùng. Vui lòng kiểm tra lại!',
+                        icon: 'error',
+                        confirmButtonText: 'Đóng'
+                    });
+                </script>
+}
+
+
+
+

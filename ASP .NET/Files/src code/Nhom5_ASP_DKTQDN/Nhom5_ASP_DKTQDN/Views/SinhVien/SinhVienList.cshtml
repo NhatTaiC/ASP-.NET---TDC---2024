@@ -1,0 +1,170 @@
+﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.SinhVien>
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@{
+    ViewData["Title"] = "SinhVienList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h1>Danh sách sinh viên</h1>
+
+<p>
+    <a asp-action="CreateSinhVien" class="btn btn-primary">Thêm Sinh Viên</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Mã sinh viên
+            </th>
+            <th>
+                Tên sinh viên
+            </th>
+            <th>
+                Số điện thoại
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Tên khoa
+            </th>
+            @* <th>
+                Tên tài khoản
+            </th> *@
+            <th>
+                Mã khóa học
+            </th>
+           @*  <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th> *@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSinhVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSinhVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoai)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.IdKhoaNavigation.TenKhoa)
+                </th>
+                @* <th>
+                    @Html.DisplayFor(modelItem => item.IdTaiKhoanNavigation.TenTaiKhoan)
+                </th> *@
+                <th>
+                    @Html.DisplayFor(modelItem => item.IdKhoaHocNavigation.MaKhoaHoc)
+                </th>
+               @*  <td>
+                    @Html.DisplayFor(modelItem => item.IsDeleted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </td> *@
+                <td>
+                    <a asp-action="EditSinhVien" asp-route-id="@item.Id" class="btn btn-primary">Sửa</a> |
+                        <a onclick ="confirmDelete(@item.Id)" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("SinhVienList",
+                new { page = page }),
+                new X.PagedList.Mvc.Core.PagedListRenderOptions
+            {
+                ContainerDivClasses = new[] { "navigation" },
+                LiElementClasses = new[] { "page-item" },
+                PageClasses = new[] { "page-link" }
+            }
+            )
+@{
+    var SuccessMessageDeleteSV = TempData["SuccessMessageDeleteSV"] as string;
+    var successMessageCreateSV = TempData["SuccessMessageCreateSV"] as string;
+    var successMessageUpdateSV = TempData["SuccessMessageUpdateSV"] as string;
+}
+
+@if (!string.IsNullOrEmpty(successMessageCreateSV))
+{
+                    <script>
+                        Swal.fire({
+                            title: 'Thông báo',
+                            text: 'Thêm thành công!',
+                            icon: 'success',
+                            confirmButtonText: 'Đóng'
+                        });
+                    </script>
+}
+
+@if (!string.IsNullOrEmpty(successMessageUpdateSV))
+{
+                <script>
+                    Swal.fire({
+                        title: 'Thông báo',
+                        text: 'Sửa thành công!',
+                        icon: 'success',
+                        confirmButtonText: 'Đóng'
+                    });
+                </script>
+}
+@if (!string.IsNullOrEmpty(SuccessMessageDeleteSV))
+{
+                    <script>
+                        Swal.fire({
+                            title: 'Thông báo',
+                            text: 'Xóa thành công!',
+                            icon: 'success',
+                            confirmButtonText: 'Đóng'
+                        });
+                    </script>
+}
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Bạn có chắc chắn muốn xóa?',
+            text: "Hành động này không thể hoàn tác!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Xác nhận',
+            cancelButtonText: 'Hủy'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/SinhVien/DeleteSinhVien/' + id;
+            }
+        });
+    }
+</script>

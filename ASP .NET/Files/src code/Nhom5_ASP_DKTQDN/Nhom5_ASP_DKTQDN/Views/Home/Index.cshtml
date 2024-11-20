@@ -1,0 +1,23 @@
+﻿@{
+    var checkRole = TempData["checkRole"] as string;
+    ViewData["Title"] = "Home Page";
+    @if (!string.IsNullOrEmpty(checkRole))
+    {
+        Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+<style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/css/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+<div class="text-center">
+    <h1 class="display-4 text-white">Welcome TDC</h1>
+</div>

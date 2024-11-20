@@ -1,0 +1,111 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IEnumerable<Nhom5_ASP_DKTQDN.Models.DoanhNghiep>
+
+@{
+    ViewData["Title"] = "DoanhNghiepList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h1>Danh sách Doanh Nghiệp</h1>
+
+<p>
+    <a type="button" class="btn btn-primary" asp-action="CreateDoanhNghiep">Thêm</a>
+</p>
+<table class="table table-bordered">
+    <thread>
+        <tr>
+            <th>Mã Doanh Nghiệp</th>
+            <th>Tên Doanh Nghiệp</th>
+            <th>Số Điện Thoại</th>
+            <th>Địa chỉ</th>
+            <th colspan="5" class="text-center">Handlers</th>
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                    <tr>
+                        <td>@item.MaDoanhNghiep</td>
+                        <td>@item.TenDoanhNghiep</td>
+                        <td>@item.SoDienThoai</td>
+                        <td>@item.DiaChi</td>
+                           <td class="text-center">
+                               <a type="button" class="btn btn-warning" asp-area="" asp-controller="DoanhNghiep" asp-action="EditDoanhNghiep" asp-route-id="@item.Id">Sửa</a>
+                            </td>
+
+                            <td class="text-center">
+                                <a type="button" class="btn btn-danger" onclick="confirmDelete(@item.Id)" @* asp-action="DeleteKhoaHoc" asp-route-id="@item.Id" *@>Xóa</a>
+                             </td>
+                    </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("DoanhNghiepList",
+                    new { page = page }),
+                    new X.PagedList.Mvc.Core.PagedListRenderOptions
+                {
+                    ContainerDivClasses = new[] { "navigation" },
+                    LiElementClasses = new[] { "page-item" },
+                    PageClasses = new[] { "page-link" }
+                }
+             )
+
+@{
+    var successMessageCreateDoanhNghiep = TempData["successMessageCreateDoanhNghiep"] as string;
+    var successMessageUpdateDoanhNghiep = TempData["successMessageUpdateDoanhNghiep"] as string;
+    var successMessageDeleteDoanhNghiep = TempData["successMessageDeleteDoanhNghiep"] as string;
+}
+
+@if (!string.IsNullOrEmpty(successMessageCreateDoanhNghiep))
+{
+                                                        <script>
+                                                            Swal.fire({
+                                                                title: 'Thông báo',
+                                                                text: 'Thêm thành công!',
+                                                                icon: 'success',
+                                                                confirmButtonText: 'Đóng'
+                                                            });
+                                                        </script>
+}
+
+@if (!string.IsNullOrEmpty(successMessageUpdateDoanhNghiep))
+{
+                                                    <script>
+                                                        Swal.fire({
+                                                            title: 'Thông báo',
+                                                            text: 'Sửa thành công!',
+                                                            icon: 'success',
+                                                            confirmButtonText: 'Đóng'
+                                                        });
+                                                    </script>
+}
+@if (!string.IsNullOrEmpty(successMessageDeleteDoanhNghiep))
+{
+                                                            <script>
+                                                                Swal.fire({
+                                                                    title: 'Thông báo',
+                                                                    text: 'Xóa thành công!',
+                                                                    icon: 'success',
+                                                                    confirmButtonText: 'Đóng'
+                                                                });
+                                                            </script>
+}
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Bạn có chắc chắn muốn xóa?',
+            text: "Hành động này không thể hoàn tác!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Xác nhận',
+            cancelButtonText: 'Hủy'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/DoanhNghiep/DeleteDoanhNghiep/' + id;
+            }
+        });
+    }
+</script>

@@ -1,0 +1,107 @@
+Thiet ke DB cho ASP .NET
+Ngay: 26/09/2024
+Review By NhatTai
+
+===== Data Tables =====
+1. TaiKhoan
+id:int:pk,
+tenTaiKhoan:varchar(100):null,
+matKhau:varchar(100):null,
+quyen:int:null,
+is_deleted:int:null,
+created_by:int:null,
+created_at:datetime:null,
+updated_by:int:null,
+updated_at:datetime:null
+
+2. KhoaHoc
+id:int:pk,
+maKhoaHoc:varchar(30):null,
+namBatDau:int:null,
+namKetThuc:int:null,
+is_deleted:int:null,
+created_by:int:null,
+created_at:datetime:null,
+updated_by:int:null,
+updated_at:datetime:null
+
+3. Khoa
+id:int:pk,
+maKhoa:varchar(30):null,
+tenKhoa:nvarchar(100):null,
+soDienThoai:varchar(10):null,
+email:varchar(100):null,
+is_deleted:int:null,
+created_by:int:null,
+created_at:datetime:null,
+updated_by:int:null,
+updated_at:datetime:null
+
+4. DoanhNghiep
+id:int:pk,
+maDoanhNghiep:varchar(30):null,
+tenDoanhNghiep:nvarchar(100):null,
+soDienThoai:varchar(10):null,
+diaChi:nvarchar(100):null,
+is_deleted:int:null,
+created_by:int:null,
+created_at:datetime:null,
+updated_by:int:null,
+updated_at:datetime:null
+
+5. GiangVien
+id:int:pk,
+maGiangVien:varchar(30):null,
+tenGiangVien:nvarchar(100):null,
+soDienThoai:varchar(10):null,
+idKhoa:int:fk,
+is_deleted:int:null,
+created_by:int:null,
+created_at:datetime:null,
+updated_by:int:null,
+updated_at:datetime:null
+
+6. SinhVien
+id:int:pk,
+maSinhVien:varchar(30):null,
+tenSinhVien:nvarchar(100):null,
+soDienThoai:varchar(10):null,
+email:varchar(100):null,
+idKhoa:int:fk,
+idTaiKhoan:int:fk,
+idKhoaHoc:int:fk,
+is_deleted:int:null,
+created_by:int:null,
+created_at:datetime:null,
+updated_by:int:null,
+updated_at:datetime:null
+
+7. ChuyenDi
+id:int:pk,
+maDangKy:varchar(30):null,
+slot:int:null,
+ngayThamQuan:datetime:null,
+trangThai:int:null,
+hocKi:int:null,
+namHoc:int:null,
+idKhoa:int:fk,
+idGiangVien:int:fk,
+idDoanhNghiep:int:fk,
+is_deleted:int:null,
+created_by:int:null,
+created_at:datetime:null,
+updated_by:int:null,
+updated_at:datetime:null
+
+8. ChiTietDangKy
+id:int:pk,
+ngayDangKy:datetime:null,
+idSinhVien:int:fk,
+idDangKy:int:fk,
+is_deleted:int:null,
+created_by:int:null,
+created_at:datetime:null,
+updated_by:int:null,
+updated_at:datetime:null
+
+====== The End ======

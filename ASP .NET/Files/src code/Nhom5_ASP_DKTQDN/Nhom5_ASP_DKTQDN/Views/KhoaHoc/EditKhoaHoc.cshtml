@@ -1,0 +1,62 @@
+﻿@model Nhom5_ASP_DKTQDN.Models.KhoaHoc
+
+@{
+    ViewData["Title"] = "Sửa khóa học";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h1>Sửa khóa học</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <form asp-action="EditKhoaHoc" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="MaKhoaHoc" class="control-label">Mã khóa học</label>
+                <input asp-for="MaKhoaHoc" class="form-control" />
+                <span asp-validation-for="MaKhoaHoc" class="text-danger"></span>
+            </div>
+           <div class="form-group">
+                <label asp-for="NamBatDau" class="control-label">Năm bắt đầu</label>
+                <input asp-for="NamBatDau" class="form-control" min="2022" max="2025"/>
+                <span asp-validation-for="NamBatDau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NamKetThuc" class="control-label">Năm kết thúc</label>
+                <input asp-for="NamKetThuc" class="form-control" min="2025" max="2027"/>
+                <span asp-validation-for="NamKetThuc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="KhoaHoc" asp-action="KhoaHocList">Trở về</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+@{
+    var errorMessageUpdate = TempData["ErrorMessageUpdate"] as string;
+}
+
+@if (!string.IsNullOrEmpty(errorMessageUpdate))
+{
+        <script>
+            Swal.fire({
+                title: 'Thông báo',
+                text: 'Mã trùng. Vui lòng kiểm tra lại!',
+                icon: 'error',
+                confirmButtonText: 'Đóng'
+            });
+        </script>
+}
