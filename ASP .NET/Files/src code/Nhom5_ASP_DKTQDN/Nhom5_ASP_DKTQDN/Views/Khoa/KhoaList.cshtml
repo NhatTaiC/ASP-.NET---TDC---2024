@@ -3,12 +3,13 @@
 @model IEnumerable<Nhom5_ASP_DKTQDN.Models.Khoa>
 
 @{
-    ViewData["Title"] = "Danh Sách Khoa";
+    ViewData["Title"] = "KhoaList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
 }
 <h1>Danh Sách Khoa</h1>
 
 <p>
-    <a type="button" class="btn btn-primary" asp-action="CreateKhoa">Thêm</a>
+    <a type="button" class="btn btn-primary" asp-action="CreateKhoa">Thêm khoa</a>
 </p>
 <table class="table table-bordered">
     <thread>
@@ -27,9 +28,9 @@
                 <td>@item.TenKhoa</td>
                 <td>@item.SoDienThoai</td>
                 <td>@item.Email</td>
-                <td class="text-center"><a asp-area="" asp-controller="Home" asp-action="EditKhoa" asp-route-id="@item.MaKhoa">Edit</a></td>
+                <td class="text-center"><a asp-area="" asp-controller="Khoa" asp-action="EditKhoa" asp-route-id="@item.Id">Sửa</a></td>
 
-                <td class="text-center"><a asp-area="" asp-controller="Home" asp-action="DeleteEditKhoa" asp-route-id="@item.MaKhoa">Delete</a></td>
+                <td class="text-center"><a asp-area="" asp-controller="Khoa" asp-action="DeleteKhoa" asp-route-id="@item.Id">Xóa</a></td>
             </tr>
 }
     </tbody>
