@@ -2,11 +2,12 @@
 
 @{
     ViewData["Title"] = "CreateChuyenDi";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
 }
 
-<h1>CreateChuyenDi</h1>
+<h1>Tạo mới chuyến đi</h1>
 
-<h4>ChuyenDi</h4>
+<h4>Thông tin chuyến đi</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -84,14 +85,14 @@
                 <span asp-validation-for="UpdatedAt" class="text-danger"></span>
             </div> *@
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Tạo" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="ChuyenDiList">Back to List</a>
+    <a asp-action="ChuyenDiList">Trở về</a>
 </div>
 
 @section Scripts {

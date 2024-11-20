@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
+using X.PagedList;
 
 namespace Nhom5_ASP_DKTQDN.Controllers
 {
@@ -97,13 +98,15 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
         //Hiện danh sách ChiTietDangKy
-        public IActionResult ChiTietDangKyList()
+        [Authorize]
+        public IActionResult ChiTietDangKyList(int? page)
         {
-            var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.ToList();
+            var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.Include(sv => sv.IdSinhVienNavigation).Include(cd=>cd.IdChuyenDiNavigation).ToPagedList(page ?? 1,10);
             return View(chiTietDangKy);
         }
 
         //Thêm ChiTietDangKy
+        [Authorize]
         public IActionResult CreateChiTietDangKy()
         {
             var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.ToList();
@@ -130,7 +133,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             _DKTQDNContext.SaveChanges();
             return RedirectToAction("ChiTietDangKyList");
         }
-
+        [Authorize]
         public IActionResult DeleteChiTietDangKy(int id)
         {
             var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.Where(t => t.Id == id).FirstOrDefault();
@@ -138,7 +141,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             _DKTQDNContext.SaveChanges();
             return RedirectToAction("ChiTietDangKyList");
         }
-
+        [Authorize]
         public IActionResult EditChiTietDangKy(int id)
         {
             var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.ToList();
@@ -154,7 +157,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditChuyenDi(ChiTietDangKy chiTietDangKy)
+        public IActionResult EditChiTietDangKy(ChiTietDangKy chiTietDangKy)
         {
             chiTietDangKy.IsDeleted = 0;
             chiTietDangKy.CreatedAt = DateTime.Now;
