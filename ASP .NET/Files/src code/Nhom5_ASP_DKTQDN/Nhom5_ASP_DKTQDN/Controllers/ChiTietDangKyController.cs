@@ -26,7 +26,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         public IActionResult DangKyChuyenDi(int id)
         {
             var sinhVien = _DKTQDNContext.SinhViens.FirstOrDefault(x => x.Email == _userManager.GetUserName(User));
-            var kiemtrachitietdangky = _DKTQDNContext.ChiTietDangKies.FirstOrDefault(oj=>oj.IsDeleted == 0 
+            var kiemtrachitietdangky = _DKTQDNContext.ChiTietDangKies.FirstOrDefault(oj => oj.IsDeleted == 0
                                                                             && oj.IdChuyenDi == id
                                                                             && oj.IdSinhVien == sinhVien.Id);
             var chuyendi = _DKTQDNContext.ChuyenDis.FirstOrDefault(oj => oj.IsDeleted == 0
@@ -41,11 +41,11 @@ namespace Nhom5_ASP_DKTQDN.Controllers
                                            IdChuyenDi = g.Key,
                                            SoNguoiDaDangKy = g.Count()
                                        }).ToList();
-           int sum = soNguoiDangKy.FirstOrDefault(oj=>oj.IdChuyenDi.Equals(id))?.SoNguoiDaDangKy ?? 0;
+            int sum = soNguoiDangKy.FirstOrDefault(oj => oj.IdChuyenDi.Equals(id))?.SoNguoiDaDangKy ?? 0;
 
             if (kiemtrachitietdangky == null)
             {
-                if(chuyendi.Slot > sum)
+                if (chuyendi.Slot > sum)
                 {
                     ChiTietDangKy ctDangKy = new ChiTietDangKy
                     {
@@ -75,13 +75,13 @@ namespace Nhom5_ASP_DKTQDN.Controllers
                 TempData["ErorrMessageDangKy"] = "hehe";
                 return RedirectToAction("ViewDangKyChuyenDi", "ChuyenDi");
             }
-            
+
         }
         //Hiện danh sách đăng kí
         [Authorize]
         public IActionResult DanhSachDangKi(int id)
         {
-            var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.Where(oj=>oj.IdChuyenDi == id).Include(sv=>sv.IdSinhVienNavigation). ToList();
+            var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.Where(oj => oj.IdChuyenDi == id).Include(sv => sv.IdSinhVienNavigation).ToList();
             return View(chiTietDangKy);
         }
         public IActionResult Index()
@@ -101,7 +101,9 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         [Authorize]
         public IActionResult ChiTietDangKyList(int? page)
         {
-            var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.Include(sv => sv.IdSinhVienNavigation).Include(cd=>cd.IdChuyenDiNavigation).ToPagedList(page ?? 1,10);
+            var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.Include(sv => sv.IdSinhVienNavigation).Include(cd => cd.IdChuyenDiNavigation)
+                .Where(ctdk => ctdk.IsDeleted == 0)
+                .ToPagedList(page ?? 1, 10);
             return View(chiTietDangKy);
         }
 
@@ -131,14 +133,16 @@ namespace Nhom5_ASP_DKTQDN.Controllers
 
             _DKTQDNContext.ChiTietDangKies.Add(chiTietDangKy);
             _DKTQDNContext.SaveChanges();
+            TempData["successMessageCreateChiTietDangKy"] = "hehe";
             return RedirectToAction("ChiTietDangKyList");
         }
         [Authorize]
         public IActionResult DeleteChiTietDangKy(int id)
         {
             var chiTietDangKy = _DKTQDNContext.ChiTietDangKies.Where(t => t.Id == id).FirstOrDefault();
-            _DKTQDNContext.Remove(chiTietDangKy);
+            chiTietDangKy.IsDeleted = 1;
             _DKTQDNContext.SaveChanges();
+            TempData["successMessageDeleteChiTietDangKy"] = "hehe";
             return RedirectToAction("ChiTietDangKyList");
         }
         [Authorize]
@@ -167,6 +171,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
 
             _DKTQDNContext.ChiTietDangKies.Update(chiTietDangKy);
             _DKTQDNContext.SaveChanges();
+            TempData["successMessageUpdateChiTietDangKy"] = "hehe";
             return RedirectToAction("ChiTietDangKyList");
         }
     }

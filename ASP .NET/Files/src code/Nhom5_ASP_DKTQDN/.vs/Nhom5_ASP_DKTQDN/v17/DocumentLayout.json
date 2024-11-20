@@ -1,22 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\",
+  "WorkspaceRootPath": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\download\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\controllers\\sinhviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\controllers\\sinhviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\controllers\\chitietdangkycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\controllers\\chitietdangkycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\download\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\download\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\chuyendi\\chuyendilist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\chuyendi\\chuyendilist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\download\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\controllers\\chuyendicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\controllers\\chuyendicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\chitietdangky\\chitietdangkylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\chitietdangky\\chitietdangkylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\chitietdangky\\editchitietdangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\chitietdangky\\editchitietdangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|d:\\github\\nhattaic\\asp-.net---tdc---2024\\asp .net\\files\\src code\\nhom5_asp_dktqdn\\nhom5_asp_dktqdn\\views\\chitietdangky\\createchitietdangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA8784E3-4425-4FA7-89E2-5409DFD848AE}|Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN.csproj|solutionrelative:nhom5_asp_dktqdn\\views\\chitietdangky\\createchitietdangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 272,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,55 +66,90 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SinhVienController.cs",
-              "DocumentMoniker": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\SinhVienController.cs",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Controllers\\SinhVienController.cs",
-              "ToolTip": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\SinhVienController.cs",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Controllers\\SinhVienController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAuwBkAAAAqAAAA",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Program.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Program.cs",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Program.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Program.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAD0AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T06:35:15.506Z",
+              "WhenOpened": "2024-11-20T10:38:36.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAAUAAAA",
+              "Title": "ChuyenDiList.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\ChuyenDi\\ChuyenDiList.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\ChuyenDi\\ChuyenDiList.cshtml",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\ChuyenDi\\ChuyenDiList.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChuyenDi\\ChuyenDiList.cshtml",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAAAJkAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T06:31:56.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAIwDQAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T06:31:54.352Z",
+              "WhenOpened": "2024-11-20T10:22:59.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\DOWNLOAD\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T06:30:55.67Z",
+              "Title": "ChuyenDiController.cs",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\ChuyenDiController.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Controllers\\ChuyenDiController.cs",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\ChuyenDiController.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Controllers\\ChuyenDiController.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAcwIYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T10:14:00.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChiTietDangKyController.cs",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\ChiTietDangKyController.cs",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Controllers\\ChiTietDangKyController.cs",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Controllers\\ChiTietDangKyController.cs",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Controllers\\ChiTietDangKyController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T10:12:28.482Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditChiTietDangKy.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\EditChiTietDangKy.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\EditChiTietDangKy.cshtml",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\EditChiTietDangKy.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\EditChiTietDangKy.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T10:12:08.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChiTietDangKyList.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\ChiTietDangKyList.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\ChiTietDangKyList.cshtml",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\ChiTietDangKyList.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\ChiTietDangKyList.cshtml",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAQwJMAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T10:09:20.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateChiTietDangKy.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\CreateChiTietDangKy.cshtml",
+              "RelativeDocumentMoniker": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\CreateChiTietDangKy.cshtml",
+              "ToolTip": "D:\\GitHub\\NhatTaiC\\ASP-.NET---TDC---2024\\ASP .NET\\files\\src code\\Nhom5_ASP_DKTQDN\\Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\CreateChiTietDangKy.cshtml",
+              "RelativeToolTip": "Nhom5_ASP_DKTQDN\\Views\\ChiTietDangKy\\CreateChiTietDangKy.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T10:11:55.566Z"
             }
           ]
         },

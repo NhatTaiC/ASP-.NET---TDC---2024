@@ -21,12 +21,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="NamBatDau" class="control-label">Năm bắt đầu</label>
-                <input asp-for="NamBatDau" class="form-control" />
+                <input asp-for="NamBatDau" class="form-control" min="2022" max="2025"/>
                 <span asp-validation-for="NamBatDau" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="NamKetThuc" class="control-label">Năm kết thúc</label>
-                <input asp-for="NamKetThuc" class="form-control" />
+                <input asp-for="NamKetThuc" class="form-control" min="2025" max="2027"/>
                 <span asp-validation-for="NamKetThuc" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -37,7 +37,7 @@
 </div>
 
 <div>
-    <a asp-controller="KhoaHoc" asp-action="KhoaHocList">Back to List</a>
+    <a asp-controller="KhoaHoc" asp-action="KhoaHocList">Trở về</a>
 </div>
 
 @section Scripts {

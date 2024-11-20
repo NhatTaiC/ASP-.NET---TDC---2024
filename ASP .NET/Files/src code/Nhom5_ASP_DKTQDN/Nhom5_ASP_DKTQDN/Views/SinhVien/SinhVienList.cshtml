@@ -29,11 +29,11 @@
             <th>
                 Tên khoa
             </th>
-            <th>
+            @* <th>
                 Tên tài khoản
-            </th>
+            </th> *@
             <th>
-                @Html.DisplayNameFor(model => model.IdKhoaHoc)
+                Mã khóa học
             </th>
            @*  <th>
                 @Html.DisplayNameFor(model => model.IsDeleted)
@@ -72,11 +72,11 @@
                 <th>
                     @Html.DisplayFor(modelItem => item.IdKhoaNavigation.TenKhoa)
                 </th>
-                <th>
+                @* <th>
                     @Html.DisplayFor(modelItem => item.IdTaiKhoanNavigation.TenTaiKhoan)
-                </th>
+                </th> *@
                 <th>
-                    @Html.DisplayFor(modelItem => item.IdKhoaHoc)
+                    @Html.DisplayFor(modelItem => item.IdKhoaHocNavigation.MaKhoaHoc)
                 </th>
                @*  <td>
                     @Html.DisplayFor(modelItem => item.IsDeleted)
@@ -95,7 +95,7 @@
                 </td> *@
                 <td>
                     <a asp-action="EditSinhVien" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> |
-                    <a asp-action="DeleteSinhVien" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                        <a onclick ="confirmDelete(@item.Id)" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
@@ -110,3 +110,61 @@
                 PageClasses = new[] { "page-link" }
             }
             )
+@{
+    var SuccessMessageDeleteSV = TempData["SuccessMessageDeleteSV"] as string;
+    var successMessageCreateSV = TempData["SuccessMessageCreateSV"] as string;
+    var successMessageUpdateSV = TempData["SuccessMessageUpdateSV"] as string;
+}
+
+@if (!string.IsNullOrEmpty(successMessageCreateSV))
+{
+                    <script>
+                        Swal.fire({
+                            title: 'Thông báo',
+                            text: 'Thêm thành công!',
+                            icon: 'success',
+                            confirmButtonText: 'Đóng'
+                        });
+                    </script>
+}
+
+@if (!string.IsNullOrEmpty(successMessageUpdateSV))
+{
+                <script>
+                    Swal.fire({
+                        title: 'Thông báo',
+                        text: 'Sửa thành công!',
+                        icon: 'success',
+                        confirmButtonText: 'Đóng'
+                    });
+                </script>
+}
+@if (!string.IsNullOrEmpty(SuccessMessageDeleteSV))
+{
+                    <script>
+                        Swal.fire({
+                            title: 'Thông báo',
+                            text: 'Xóa thành công!',
+                            icon: 'success',
+                            confirmButtonText: 'Đóng'
+                        });
+                    </script>
+}
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Bạn có chắc chắn muốn xóa?',
+            text: "Hành động này không thể hoàn tác!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Xác nhận',
+            cancelButtonText: 'Hủy'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/SinhVien/DeleteSinhVien/' + id;
+            }
+        });
+    }
+</script>

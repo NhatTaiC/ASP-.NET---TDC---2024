@@ -90,7 +90,8 @@ namespace Nhom5_ASP_DKTQDN.Controllers
                                                    .Include(gv => gv.IdDoanhNghiepNavigation)
                                                    .Include(gv => gv.IdKhoaHocNavigation)
                                                    .Include(gv => gv.IdKhoaNavigation)
-                                                   .ToPagedList(page?? 1,10);
+                                                   .Where(cd => cd.IsDeleted == 0)
+                                                   .ToPagedList(page ?? 1, 10);
             return View(chuyenDi);
         }
 
@@ -126,6 +127,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
 
             _DKTQDNContext.ChuyenDis.Add(chuyenDi);
             _DKTQDNContext.SaveChanges();
+            TempData["successMessageCreateChuyenDi"] = "hehe";
             return RedirectToAction("ChuyenDiList");
         }
 
@@ -133,21 +135,23 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         public IActionResult DeleteChuyenDi(int id)
         {
             var chuyenDi = _DKTQDNContext.ChuyenDis.Where(t => t.Id == id).FirstOrDefault();
-            _DKTQDNContext.Remove(chuyenDi);
+            //_DKTQDNContext.Remove(chuyenDi);
+            chuyenDi.IsDeleted = 1;
             _DKTQDNContext.SaveChanges();
+            TempData["successMessageDeleteChuyenDi"] = "hehe";
             return RedirectToAction("ChuyenDiList");
         }
 
         [Authorize]
         public IActionResult EditChuyenDi(int id)
         {
-            var chuyenDi = _DKTQDNContext.ChuyenDis.ToList();
+            //var chuyenDi = _DKTQDNContext.ChuyenDis.ToList();
             var giangVien = _DKTQDNContext.GiangViens.ToList();
             var doanhNghiep = _DKTQDNContext.DoanhNghieps.ToList();
             var khoa = _DKTQDNContext.Khoas.ToList();
             var khoaHoc = _DKTQDNContext.KhoaHocs.ToList();
 
-            ViewBag.ChuyenDiSelectList = new SelectList(chuyenDi, "Id", "MaChuyenDi");
+            //ViewBag.ChuyenDiSelectList = new SelectList(chuyenDi, "Id", "MaChuyenDi");
             ViewBag.GiangVienSelectList = new SelectList(giangVien, "Id", "TenGiangVien");
             ViewBag.DoanhNghiepSelectList = new SelectList(doanhNghiep, "Id", "TenDoanhNghiep");
             ViewBag.KhoaHocSelectList = new SelectList(khoaHoc, "Id", "MaKhoaHoc");
@@ -160,7 +164,6 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         [HttpPost]
         public IActionResult EditChuyenDi(ChuyenDi chuyenDi)
         {
-            chuyenDi.TrangThai = 0;
             chuyenDi.IsDeleted = 0;
             chuyenDi.CreatedAt = DateTime.Now.Date;
             chuyenDi.CreatedBy = 0;
@@ -169,6 +172,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
 
             _DKTQDNContext.ChuyenDis.Update(chuyenDi);
             _DKTQDNContext.SaveChanges();
+            TempData["successMessageUpdateChuyenDi"] = "hehe";
             return RedirectToAction("ChuyenDiList");
         }
     }

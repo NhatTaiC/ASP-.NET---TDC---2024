@@ -19,23 +19,23 @@
         <form asp-action="CreateKhoa" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="MaKhoa" class="control-label"></label>
+                <label asp-for="MaKhoa" class="control-label">Mã khoa</label>
                 <input asp-for="MaKhoa" class="form-control" />
                 <span asp-validation-for="MaKhoa" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TenKhoa" class="control-label"></label>
+                <label asp-for="TenKhoa" class="control-label">Tên khoa</label>
                 <input asp-for="TenKhoa" class="form-control" />
                 <span asp-validation-for="TenKhoa" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SoDienThoai" class="control-label"></label>
+                <label asp-for="SoDienThoai" class="control-label">Số điện thoại</label>
                 <input asp-for="SoDienThoai" class="form-control" />
                 <span asp-validation-for="SoDienThoai" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" type="email"/>
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
