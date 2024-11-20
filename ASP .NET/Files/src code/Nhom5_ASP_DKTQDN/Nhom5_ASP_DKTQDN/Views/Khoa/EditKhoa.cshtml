@@ -1,26 +1,27 @@
-﻿@model Nhom5_ASP_DKTQDN.Models.SinhVien
+﻿@model Nhom5_ASP_DKTQDN.Models.Khoa
 
 @{
-    ViewData["Title"] = "Thêm sinh viên";
+    ViewData["Title"] = "Sửa khoa";
 }
 
-<h1>Thêm sinh viên</h1>
+<h1>EditKhoa</h1>
 
-<h4>SinhVien</h4>
+<h4>Khoa</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreateSinhVien">
+        <form asp-action="EditKhoa">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="MaSinhVien" class="control-label"></label>
-                <input asp-for="MaSinhVien" class="form-control" />
-                <span asp-validation-for="MaSinhVien" class="text-danger"></span>
+                <label asp-for="MaKhoa" class="control-label"></label>
+                <input asp-for="MaKhoa" class="form-control" />
+                <span asp-validation-for="MaKhoa" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TenSinhVien" class="control-label"></label>
-                <input asp-for="TenSinhVien" class="form-control" />
-                <span asp-validation-for="TenSinhVien" class="text-danger"></span>
+                <label asp-for="TenKhoa" class="control-label"></label>
+                <input asp-for="TenKhoa" class="form-control" />
+                <span asp-validation-for="TenKhoa" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="SoDienThoai" class="control-label"></label>
@@ -31,18 +32,6 @@
                 <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdKhoa" class="control-label"></label>
-                <select asp-for="IdKhoa" class ="form-control" asp-items="ViewBag.IdKhoa"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdTaiKhoan" class="control-label"></label>
-                <select asp-for="IdTaiKhoan" class ="form-control" asp-items="ViewBag.IdTaiKhoan"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdKhoaHoc" class="control-label"></label>
-                <select asp-for="IdKhoaHoc" class ="form-control" asp-items="ViewBag.IdKhoaHoc"></select>
             </div>
             <div class="form-group">
                 <label asp-for="IsDeleted" class="control-label"></label>
@@ -70,7 +59,7 @@
                 <span asp-validation-for="UpdatedAt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>

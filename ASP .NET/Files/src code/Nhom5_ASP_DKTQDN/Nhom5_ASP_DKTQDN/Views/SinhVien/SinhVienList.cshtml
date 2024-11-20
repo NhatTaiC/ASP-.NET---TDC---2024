@@ -2,12 +2,13 @@
 
 @{
     ViewData["Title"] = "SinhVienList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
 }
 
 <h1>SinhVienList</h1>
 
 <p>
-    <a asp-action="CreateSinhVien">Create New</a>
+    <a asp-action="CreateSinhVien" class="btn btn-primary">Thêm Sinh Viên</a>
 </p>
 <table class="table">
     <thead>
@@ -68,7 +69,7 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.IdKhoa)
+                    @Html.DisplayFor(modelItem => item.IdKhoaNavigation.TenKhoa)
                 </th>
                 <th>
                     @Html.DisplayFor(modelItem => item.IdTaiKhoan)
@@ -92,9 +93,8 @@
                     @Html.DisplayFor(modelItem => item.UpdatedAt)
                 </td>
                 <td>
-                    <a asp-action="EditSinhVien" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="DeleteSinhVien" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="EditSinhVien" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> |
+                    <a asp-action="DeleteSinhVien" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }

@@ -11,14 +11,14 @@ namespace Nhom5_ASP_DKTQDN.Models
         }
 
         public int Id { get; set; }
-        public string TenTaiKhoan { get; set; } = null!;
-        public string MatKhau { get; set; } = null!;
-        public int Quyen { get; set; }
-        public int IsDeleted { get; set; }
-        public int CreatedBy { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public int UpdatedBy { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public string? TenTaiKhoan { get; set; }
+        public string? MatKhau { get; set; }
+        public int? Quyen { get; set; }
+        public int? IsDeleted { get; set; }
+        public int? CreatedBy { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public int? UpdatedBy { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
         public virtual ICollection<SinhVien> SinhViens { get; set; }
     }

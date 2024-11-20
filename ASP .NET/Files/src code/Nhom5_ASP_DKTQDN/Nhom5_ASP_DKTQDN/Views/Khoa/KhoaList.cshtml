@@ -1,0 +1,45 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IEnumerable<Nhom5_ASP_DKTQDN.Models.Khoa>
+
+@{
+    ViewData["Title"] = "Danh Sách Khoa";
+}
+<h1>Danh Sách Khoa</h1>
+
+<p>
+    <a type="button" class="btn btn-primary" asp-action="CreateKhoa">Thêm</a>
+</p>
+<table class="table table-bordered">
+    <thread>
+        <tr>
+            <th>Mã Khoa</th>
+            <th>Tên Khoa</th>
+            <th>Số Điện Thoại</th>
+            <th>Email</th>
+            <th colspan="5" class="text-center">Handlers</th>
+        </tr>
+    </thread>
+    <tbody>
+@foreach (Khoa item in Model) {
+            <tr>
+                <td>@item.MaKhoa</td>
+                <td>@item.TenKhoa</td>
+                <td>@item.SoDienThoai</td>
+                <td>@item.Email</td>
+                <td class="text-center"><a asp-area="" asp-controller="Home" asp-action="EditKhoa" asp-route-id="@item.MaKhoa">Edit</a></td>
+
+                <td class="text-center"><a asp-area="" asp-controller="Home" asp-action="DeleteEditKhoa" asp-route-id="@item.MaKhoa">Delete</a></td>
+            </tr>
+}
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("KhoaList",
+        new { page = page }),
+        new X.PagedList.Mvc.Core.PagedListRenderOptions
+    {
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" }
+    }
+ )

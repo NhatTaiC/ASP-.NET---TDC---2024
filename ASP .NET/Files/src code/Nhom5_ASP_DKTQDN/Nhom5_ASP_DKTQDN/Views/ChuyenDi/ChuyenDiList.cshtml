@@ -13,50 +13,32 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.MaChuyenDi)
+                Tên doanh nghiệp
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Slot)
+                Giảng viên
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NgayThamQuan)
+                    
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TrangThai)
+                Khoa
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HocKi)
+                Ngày tham quan
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NamHoc)
+                Slot
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
+                Trạng thái
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedBy)
+               Học kì
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UpdatedBy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UpdatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdDoanhNghiepNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdGiangVienNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdKhoaHocNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdKhoaNavigation)
-            </th>
+                Năm học
+            </th>        
             <th></th>
         </tr>
     </thead>
@@ -64,53 +46,45 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.MaChuyenDi)
+                @Html.DisplayFor(modelItem => item.IdDoanhNghiepNavigation.TenDoanhNghiep)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Slot)
+                @Html.DisplayFor(modelItem => item.IdGiangVienNavigation.TenGiangVien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdKhoaHocNavigation.MaKhoaHoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdKhoaNavigation.TenKhoa)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NgayThamQuan)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TrangThai)
+                @Html.DisplayFor(modelItem => item.Slot)
             </td>
+                @if (item.TrangThai == 0)
+                {
+                    <td style="color:green">
+                        Hoạt động
+                    </td>
+                }
+                else
+                {
+                    <td style="color:red">
+                        Đang đóng
+                    </td>
+                }           
             <td>
                 @Html.DisplayFor(modelItem => item.HocKi)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NamHoc)
             </td>
+   
             <td>
-                @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdDoanhNghiep)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdGiangVien)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdKhoaHoc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdKhoa)
-            </td>
-            <td>
-                <a asp-action="EditChuyenDi" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="EditChuyenDi" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="DanhSachDangKi" asp-controller="ChiTietDangKy" asp-route-id="@item.Id">Danh sách đăng kí</a> |
                 <a asp-action="DeleteChuyenDi" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
