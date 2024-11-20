@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
 using X.PagedList;
@@ -28,18 +29,31 @@ namespace Nhom5_ASP_DKTQDN.Controllers
                 _dKTQDNContext.Khoas.Remove(obj);
                 _dKTQDNContext.SaveChanges();
             }
-            return RedirectToAction("DoanhNghiepList");
+            return RedirectToAction("KhoaList");
         }
-        public IActionResult KhoaUpdate(int? id)
+        [HttpPost]
+        public IActionResult EditKhoa(Khoa giangVien)
+        {
+            _dKTQDNContext.Khoas.Update(giangVien);
+            _dKTQDNContext.SaveChanges();
+            return RedirectToAction("KhoaList");
+        }
+        public IActionResult EditKhoa(int? id)
         {
             Khoa objKhoa = _dKTQDNContext.Khoas.FirstOrDefault(d => d.Id == id);
             return View(objKhoa);
         }
+        
+        [HttpPost]
         public IActionResult CreateKhoa(Khoa obj)
         {
             _dKTQDNContext.Add(obj);
             _dKTQDNContext.SaveChanges();
             return RedirectToAction("KhoaList");
+        }
+        public IActionResult CreateKhoa()
+        {
+            return View();
         }
         public IActionResult Error()
         {

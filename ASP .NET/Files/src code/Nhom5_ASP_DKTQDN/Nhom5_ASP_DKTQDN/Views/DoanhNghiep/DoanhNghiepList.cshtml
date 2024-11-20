@@ -28,13 +28,13 @@
                 <td>@item.TenDoanhNghiep</td>
                 <td>@item.SoDienThoai</td>
                 <td>@item.DiaChi</td>
-                <td class="text-center"><a asp-area="" asp-controller="Home" asp-action="EditDoanhNghiep" asp-route-id="@item.Id">Sửa</a></td>
-                <td class="text-center"><a asp-area="" asp-controller="Home" asp-action="DeleteDoanhNghiep" asp-route-id="@item.Id">Xóa</a></td>
+                <td class="text-center"><a asp-area="" asp-controller="DoanhNghiep" asp-action="EditDoanhNghiep" asp-route-id="@item.Id">Sửa</a></td>
+                <td class="text-center"><a asp-area="" asp-controller="DoanhNghiep" asp-action="DeleteDoanhNghiep" asp-route-id="@item.Id">Xóa</a></td>
             </tr>
         }
     </tbody>
 </table>
-@Html.PagedListPager((IPagedList)Model, page => Url.Action("KhoaList",
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("DoanhNghiepList",
             new { page = page }),
             new X.PagedList.Mvc.Core.PagedListRenderOptions
         {
