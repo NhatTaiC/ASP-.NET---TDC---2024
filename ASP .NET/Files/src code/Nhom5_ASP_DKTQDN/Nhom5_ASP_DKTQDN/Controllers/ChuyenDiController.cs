@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
+using X.PagedList;
 
 namespace Nhom5_ASP_DKTQDN.Controllers
 {
@@ -82,17 +83,19 @@ namespace Nhom5_ASP_DKTQDN.Controllers
         }
 
         //Hiện danh sách chuyen di
-        public IActionResult ChuyenDiList()
+        [Authorize]
+        public IActionResult ChuyenDiList(int? page)
         {
             var chuyenDi = _DKTQDNContext.ChuyenDis.Include(gv => gv.IdGiangVienNavigation)
                                                    .Include(gv => gv.IdDoanhNghiepNavigation)
                                                    .Include(gv => gv.IdKhoaHocNavigation)
                                                    .Include(gv => gv.IdKhoaNavigation)
-                                                   .ToList();
+                                                   .ToPagedList(page?? 1,10);
             return View(chuyenDi);
         }
 
         //Thêm chuyen di
+        [Authorize]
         public IActionResult CreateChuyenDi()
         {
             var chuyenDi = _DKTQDNContext.ChuyenDis.ToList();
@@ -126,6 +129,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             return RedirectToAction("ChuyenDiList");
         }
 
+        [Authorize]
         public IActionResult DeleteChuyenDi(int id)
         {
             var chuyenDi = _DKTQDNContext.ChuyenDis.Where(t => t.Id == id).FirstOrDefault();
@@ -134,6 +138,7 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             return RedirectToAction("ChuyenDiList");
         }
 
+        [Authorize]
         public IActionResult EditChuyenDi(int id)
         {
             var chuyenDi = _DKTQDNContext.ChuyenDis.ToList();

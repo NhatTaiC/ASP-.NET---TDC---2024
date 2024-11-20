@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Nhom5_ASP_DKTQDN.Models;
 using System.Diagnostics;
 using X.PagedList;
@@ -16,11 +16,13 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             _dKTQDNContext = dKTQDN;
         }
 
+        [Authorize]
         public IActionResult KhoaList(int? page)
         {
             var khoaList = _dKTQDNContext.Khoas.ToPagedList(page ?? 1, 10);
             return View(khoaList);
         }
+        [Authorize]
         public IActionResult DeleteKhoa(int id)
         {
             Khoa obj = _dKTQDNContext.Khoas.SingleOrDefault(d => d.Id == id);
@@ -29,31 +31,20 @@ namespace Nhom5_ASP_DKTQDN.Controllers
                 _dKTQDNContext.Khoas.Remove(obj);
                 _dKTQDNContext.SaveChanges();
             }
-            return RedirectToAction("KhoaList");
+            return RedirectToAction("DoanhNghiepList");
         }
-        [HttpPost]
-        public IActionResult EditKhoa(Khoa giangVien)
-        {
-            _dKTQDNContext.Khoas.Update(giangVien);
-            _dKTQDNContext.SaveChanges();
-            return RedirectToAction("KhoaList");
-        }
-        public IActionResult EditKhoa(int? id)
+        [Authorize]
+        public IActionResult KhoaUpdate(int? id)
         {
             Khoa objKhoa = _dKTQDNContext.Khoas.FirstOrDefault(d => d.Id == id);
             return View(objKhoa);
         }
-        
-        [HttpPost]
+        [Authorize]
         public IActionResult CreateKhoa(Khoa obj)
         {
             _dKTQDNContext.Add(obj);
             _dKTQDNContext.SaveChanges();
             return RedirectToAction("KhoaList");
-        }
-        public IActionResult CreateKhoa()
-        {
-            return View();
         }
         public IActionResult Error()
         {

@@ -1,21 +1,25 @@
 ﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.ChiTietDangKy>
+@using X.PagedList
+@using X.PagedList.Mvc.Core
 
 @{
     ViewData["Title"] = "ChiTietDangKyList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
 }
 
-<h1>ChiTietDangKyList</h1>
+<h1>Danh sách chi tiết đăng ký</h1>
 
 <p>
-    <a asp-action="CreateChiTietDangKy">Create New</a>
+    <a asp-action="CreateChiTietDangKy">Tạo mới</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NgayDangKy)
+                Ngày đăng ký
+               @*  @Html.DisplayNameFor(model => model.NgayDangKy) *@
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.IsDeleted)
             </th>
             <th>
@@ -29,12 +33,14 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th> *@
+            <th>
+                Mã chuyến đi
+                @* @Html.DisplayNameFor(model => model.IdChuyenDiNavigation) *@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdChuyenDiNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdSinhVienNavigation)
+                Tên sinh viên
+               @*  @Html.DisplayNameFor(model => model.IdSinhVienNavigation) *@
             </th>
             <th></th>
         </tr>
@@ -45,7 +51,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.NgayDangKy)
             </td>
-            <td>
+           @*  <td>
                 @Html.DisplayFor(modelItem => item.IsDeleted)
             </td>
             <td>
@@ -59,19 +65,28 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.IdChuyenDiNavigation.MaChuyenDi)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdChuyenDi)
+                    @Html.DisplayFor(modelItem => item.IdSinhVienNavigation.TenSinhVien)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdSinhVien)
-            </td>
-            <td>
-                    <a asp-action="EditChiTietDangKy" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="DeleteChiTietDangKy" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="EditChiTietDangKy" asp-route-id="@item.Id">Sửa</a> |
+                @* <a asp-action="Details" asp-route-id="@item.Id">Details</a> | *@
+                <a asp-action="DeleteChiTietDangKy" asp-route-id="@item.Id">Xóa</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("ChiTietDangKyList",
+            new { page = page }),
+            new X.PagedList.Mvc.Core.PagedListRenderOptions
+        {
+            ContainerDivClasses = new[] { "navigation" },
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" }
+        }
+            )
