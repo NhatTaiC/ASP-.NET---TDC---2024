@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Nhom5_ASP_DKTQDN.Models;
+using X.PagedList;
 
 namespace Nhom5_ASP_DKTQDN.Controllers
 {
@@ -23,9 +26,10 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             return View();
         }
 
-        public IActionResult SinhVienList()
-        {
-            var sinhVien = _DKTQDNContext.SinhViens.Include(oj => oj.IdKhoaNavigation).ToList();
+        //[Authorize]
+        public IActionResult SinhVienList(int? page)
+		{
+            var sinhVien = _DKTQDNContext.SinhViens.Include(oj => oj.IdKhoaNavigation).Include(id => id.IdTaiKhoanNavigation).ToPagedList(page ?? 1, 10);
             return View(sinhVien);
         }
 

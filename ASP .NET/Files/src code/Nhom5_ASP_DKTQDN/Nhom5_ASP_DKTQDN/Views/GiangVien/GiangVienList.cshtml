@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Nhom5_ASP_DKTQDN.Models.GiangVien>
-
+@using X.PagedList
+@using X.PagedList.Mvc.Core
 @{
 	ViewData["Title"] = "GiangVienList";
 }
@@ -13,15 +14,18 @@
 	<thead>
 		<tr>
 			<th>
-				@Html.DisplayNameFor(model => model.MaGiangVien)
+				Mã giảng viên
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.TenGiangVien)
+				Tên giảng viên
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.SoDienThoai)
+				Số điện thoại
 			</th>
 			<th>
+				Tên khoa
+			</th>
+			@* <th>
 				@Html.DisplayNameFor(model => model.IsDeleted)
 			</th>
 			<th>
@@ -38,7 +42,7 @@
 			</th>
 			<th>
 				@Html.DisplayNameFor(model => model.IdKhoaNavigation)
-			</th>
+			</th> *@
 			<th></th>
 		</tr>
 	</thead>
@@ -56,6 +60,9 @@
 					@Html.DisplayFor(modelItem => item.SoDienThoai)
 				</td>
 				<td>
+					@Html.DisplayFor(modelItem => item.IdKhoaNavigation.TenKhoa)
+				</td>
+				@* <td>
 					@Html.DisplayFor(modelItem => item.IsDeleted)
 				</td>
 				<td>
@@ -72,7 +79,7 @@
 				</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.IdKhoaNavigation.Id)
-				</td>
+				</td> *@
 				<td>
 					<a asp-action="EditGiangVien" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
 					<a asp-action="DeleteGiangVien" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
@@ -81,3 +88,12 @@
 		}
 	</tbody>
 </table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("GiangVienList",
+			new { page = page }),
+			new X.PagedList.Mvc.Core.PagedListRenderOptions
+		{
+			ContainerDivClasses = new[] { "navigation" },
+			LiElementClasses = new[] { "page-item" },
+			PageClasses = new[] { "page-link" }
+		}
+		)

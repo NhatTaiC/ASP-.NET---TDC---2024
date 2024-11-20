@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Nhom5_ASP_DKTQDN.Models;
+using X.PagedList;
 
 namespace Nhom5_ASP_DKTQDN.Controllers
 {
@@ -22,10 +26,11 @@ namespace Nhom5_ASP_DKTQDN.Controllers
             return View();
         }
 
-        //Hiện danh sách giảng viên
-        public IActionResult GiangVienList()
-        {
-            var giangVien = _DKTQDNContext.GiangViens.ToList();
+		[Authorize]
+		//Hiện danh sách giảng viên
+		public IActionResult GiangVienList(int? page)
+		{
+            var giangVien = _DKTQDNContext.GiangViens.Include(id => id.IdKhoaNavigation).ToPagedList(page ?? 1, 10);
             return View(giangVien);
         }
 
