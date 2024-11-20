@@ -2,11 +2,12 @@
 
 @{
     ViewData["Title"] = "Sửa Doanh Nghiệp";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
 }
 
 <h1>Sửa Doanh Nghiệp</h1>
 
-<h4>Doanh Nghiệp</h4>
+@* <h4>Doanh Nghiệp</h4> *@
 
 <div>
     <a asp-action="DoanhNghiepList">Trở về </a>
@@ -19,22 +20,22 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="MaDoanhNghiep" class="control-label"></label>
+                <label asp-for="MaDoanhNghiep" class="control-label">Mã doanh nghiệp</label>
                 <input asp-for="MaDoanhNghiep" class="form-control" />
                 <span asp-validation-for="MaDoanhNghiep" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TenDoanhNghiep" class="control-label"></label>
+                <label asp-for="TenDoanhNghiep" class="control-label">Tên doanh nghiệp</label>
                 <input asp-for="TenDoanhNghiep" class="form-control" />
                 <span asp-validation-for="TenDoanhNghiep" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SoDienThoai" class="control-label"></label>
+                <label asp-for="SoDienThoai" class="control-label">Số điện thoại</label>
                 <input asp-for="SoDienThoai" class="form-control" />
                 <span asp-validation-for="SoDienThoai" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DiaChi" class="control-label"></label>
+                <label asp-for="DiaChi" class="control-label">Địa chỉ</label>
                 <input asp-for="DiaChi" class="form-control" />
                 <span asp-validation-for="DiaChi" class="text-danger"></span>
             </div>

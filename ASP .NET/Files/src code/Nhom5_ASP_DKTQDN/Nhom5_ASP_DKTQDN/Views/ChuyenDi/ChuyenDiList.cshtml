@@ -22,7 +22,7 @@
                 Giảng viên
             </th>
             <th>
-                    Mã khoa
+                Mã khoa
             </th>
             <th>
                 Khoa
@@ -86,9 +86,9 @@
             </td>
    
             <td>
-                <a asp-action="EditChuyenDi" asp-route-id="@item.Id">Sửa</a>|
-                <a asp-action="DanhSachDangKi" asp-controller="ChiTietDangKy" asp-route-id="@item.Id">Danh sách đăng kí</a> |
-                <a asp-action="DeleteChuyenDi" asp-route-id="@item.Id">Xóa</a>
+                        <a class="btn btn-warning" asp-action="EditChuyenDi" asp-route-id="@item.Id">Sửa</a>|
+                    <a class="btn btn-info" asp-action="DanhSachDangKi" asp-controller="ChiTietDangKy" asp-route-id="@item.Id">Danh sách đăng kí</a> |
+                <a type="button" class="btn btn-danger" onclick="confirmDelete(@item.Id)" @* asp-action="DeleteKhoaHoc" asp-route-id="@item.Id" *@>Xóa</a>
             </td>
         </tr>
 }
@@ -103,3 +103,61 @@
                 PageClasses = new[] { "page-link" }
             }
                 )
+@{
+    var successMessageCreateChuyenDi = TempData["successMessageCreateChuyenDi"] as string;
+    var successMessageUpdateChuyenDi = TempData["successMessageUpdateChuyenDi"] as string;
+    var successMessageDeleteChuyenDi = TempData["successMessageDeleteChuyenDi"] as string;
+}
+
+@if (!string.IsNullOrEmpty(successMessageCreateChuyenDi))
+{
+                                                            <script>
+                                                                Swal.fire({
+                                                                    title: 'Thông báo',
+                                                                    text: 'Thêm thành công!',
+                                                                    icon: 'success',
+                                                                    confirmButtonText: 'Đóng'
+                                                                });
+                                                            </script>
+}
+
+@if (!string.IsNullOrEmpty(successMessageUpdateChuyenDi))
+{
+                                                        <script>
+                                                            Swal.fire({
+                                                                title: 'Thông báo',
+                                                                text: 'Sửa thành công!',
+                                                                icon: 'success',
+                                                                confirmButtonText: 'Đóng'
+                                                            });
+                                                        </script>
+}
+@if (!string.IsNullOrEmpty(successMessageDeleteChuyenDi))
+{
+                                                                <script>
+                                                                    Swal.fire({
+                                                                        title: 'Thông báo',
+                                                                        text: 'Xóa thành công!',
+                                                                        icon: 'success',
+                                                                        confirmButtonText: 'Đóng'
+                                                                    });
+                                                                </script>
+}
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Bạn có chắc chắn muốn xóa?',
+            text: "Hành động này không thể hoàn tác!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Xác nhận',
+            cancelButtonText: 'Hủy'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/ChuyenDi/DeleteChuyenDi/' + id;
+            }
+        });
+    }
+</script>

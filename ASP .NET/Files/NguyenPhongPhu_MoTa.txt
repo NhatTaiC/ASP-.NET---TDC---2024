@@ -4,7 +4,6 @@ quản lý thông tin người tham quan và lịch trình tham quan, nâng cao 
 Mục Tiêu:
 - Xây dựng cơ sở dữ liệu tập trung lưu trữ thông tin người tham quan và lịch trình.
 - Cung cấp giao diện trực quan, dễ sử dụng cho cả người đăng ký và người quản lý.
-- Tạo các báo cáo thống kê chi tiết về số lượng người tham quan.
 Phạm Vi:
 - Đối tượng: Sinh viên trường cao đẳng công nghệ thủ đức.
 - Loại hình tham quan: Tham quan các doanh nghiệp hợp tác và những công ty lớn (Thực tế).

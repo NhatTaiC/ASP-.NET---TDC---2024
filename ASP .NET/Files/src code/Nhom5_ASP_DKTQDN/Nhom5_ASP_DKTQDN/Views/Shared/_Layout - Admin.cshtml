@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -38,15 +41,31 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TaiKhoanList">Tài Khoản</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="KhoaHoc" asp-action="KhoaHocList">Khóa học</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="KhoaHoc" asp-action="SinhVienList">SinhVien</a>
-                        </li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                                  <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="KhoaHoc" asp-action="KhoaHocList">Khóa học</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Khoa" asp-action="KhoaList">Khoa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="DoanhNghiep" asp-action="DoanhNghiepList">Doanh Nghiệp</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="GiangVien" asp-action="GiangVienList">Giảng Viên</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="SinhVien" asp-action="SinhVienList">Sinh Viên</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="ChuyenDi" asp-action="ChuyenDiList">Chuyến Đi</a>
+                            </li>
+                             <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="ChiTietDangKy" asp-action="ChiTietDangKyList">Chi Tiết Chuyến Đi</a>
+                            </li>
+                        }
+
                     </ul>
                 </div>
                 <partial name="_LoginPartial" />
